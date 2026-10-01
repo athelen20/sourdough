@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Snow &mdash; printable cards</title>
+<style>
+  @page { size: letter portrait; margin: 0; }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #32241a;
+    background: #e9e2d6;
+  }
+
+  .sheet {
+    width: 8.5in;
+    height: 11in;
+    display: grid;
+    grid-template-columns: 4.25in 4.25in;
+    grid-template-rows: 5.5in 5.5in;
+    background: #fff;
+    margin: 0 auto;
+  }
+
+  .card {
+    width: 4.25in;
+    height: 5.5in;
+    padding: 0.33in 0.36in;
+    border: 1px dashed #d9cbb4;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* ---------- FRONT ---------- */
+
+  .front { text-align: center; align-items: center; justify-content: flex-start; }
+
+  .front .kicker {
+    font-size: 7.5pt;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #a08765;
+    margin: 0;
+  }
+
+  .front h1 {
+    font-size: 34pt;
+    line-height: 1;
+    margin: 0.06in 0 0.02in;
+    color: #6f4220;
+    letter-spacing: -0.01em;
+  }
+
+  .front .sub {
+    font-size: 9.5pt;
+    color: #7a6755;
+    margin: 0 0 0.14in;
+    font-style: italic;
+  }
+
+  .front .rule {
+    width: 1in;
+    border-top: 2px solid #c9743b;
+    margin: 0 0 0.16in;
+  }
+
+  .front .pitch {
+    font-size: 9.5pt;
+    line-height: 1.45;
+    margin: 0 0 0.16in;
+    color: #32241a;
+  }
+
+  .front .qrbox {
+    background: #fff;
+    border: 2px solid #e7dac7;
+    border-radius: 7pt;
+    padding: 5pt;
+    line-height: 0;
+  }
+
+  .front .qrbox img { width: 1.42in; height: 1.42in; display: block; }
+
+  .front .scan {
+    font-size: 8pt;
+    color: #7a6755;
+    margin: 0.1in 0 0.02in;
+  }
+
+  .front .url {
+    font-size: 9pt;
+    font-weight: 700;
+    color: #6f4220;
+    margin: 0;
+    word-break: break-all;
+  }
+
+  .front .foot {
+    margin-top: auto;
+    font-size: 7.5pt;
+    color: #a08765;
+  }
+
+  /* ---------- BACK ---------- */
+
+  .back .btitle {
+    font-size: 13pt;
+    color: #6f4220;
+    margin: 0 0 0.02in;
+    font-weight: 800;
+  }
+
+  .back .bsub {
+    font-size: 7.6pt;
+    color: #7a6755;
+    margin: 0 0 0.1in;
+  }
+
+  .back ol { margin: 0; padding-left: 0.24in; }
+
+  .back li {
+    font-size: 8.2pt;
+    line-height: 1.33;
+    margin-bottom: 0.05in;
+  }
+
+  .back li b { color: #6f4220; }
+
+  .back .ready {
+    background: #f6efe3;
+    border-left: 3px solid #4e7a3f;
+    border-radius: 4pt;
+    padding: 0.06in 0.09in;
+    font-size: 7.8pt;
+    line-height: 1.32;
+    margin: 0.03in 0 0.05in;
+  }
+
+  .back .btitle2 {
+    font-size: 9.5pt;
+    color: #6f4220;
+    font-weight: 800;
+    margin: 0.04in 0 0.025in;
+  }
+
+  .back .keep {
+    font-size: 8pt;
+    line-height: 1.33;
+    margin: 0 0 0.055in;
+  }
+
+  .back .keep b { color: #6f4220; }
+
+  .back .dontpanic {
+    font-size: 7.4pt;
+    line-height: 1.32;
+    color: #7a6755;
+    margin: 0;
+    padding: 0.055in 0.08in;
+    background: #faf5ec;
+    border-radius: 4pt;
+  }
+
+  .back .dontpanic b { color: #b4452f; }
+
+  .back .tail {
+    margin-top: auto;
+    border-top: 1px solid #e7dac7;
+    padding-top: 0.07in;
+    font-size: 7.4pt;
+    line-height: 1.32;
+    color: #7a6755;
+    display: flex;
+    align-items: center;
+    gap: 0.09in;
+  }
+
+  .back .tail img { width: 0.44in; height: 0.44in; flex-shrink: 0; }
+  .back .tail b { color: #6f4220; display: block; font-size: 8pt; }
+
+  /* ---------- screen helpers ---------- */
+
+  .note {
+    max-width: 8.5in;
+    margin: 0.3in auto;
+    padding: 0.2in;
+    background: #fffdf9;
+    border: 1px solid #d9cbb4;
+    border-radius: 8px;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  .note h2 { margin: 0 0 0.08in; font-size: 13pt; color: #6f4220; }
+  .note code { background: #f0e6d6; padding: 1px 4px; border-radius: 3px; }
+
+  @media print {
+    body { background: #fff; }
+    .note { display: none; }
+    .sheet { page-break-after: always; }
+    .sheet:last-child { page-break-after: auto; }
+    .card { border-color: #eee4d2; }
+  }
+</style>
+</head>
+<body>
+
+<div class="note">
+  <h2>Printing these cards</h2>
+  <p>Four cards per sheet, 4.25&nbsp;&times;&nbsp;5.5&nbsp;inches each (a quarter of a Letter page).
+  Page&nbsp;1 is the front, page&nbsp;2 is the back.</p>
+  <ul>
+    <li>Print <b>double-sided</b>, flip on the <b>long edge</b>.</li>
+    <li>Scale: <b>100%</b> &mdash; not "fit to page", or the QR code shrinks.</li>
+    <li>Turn <b>on</b> "Background graphics" in the print dialog.</li>
+    <li>Margins: <b>None</b>.</li>
+    <li>All four cards on a sheet are identical, so the back lines up whichever way your
+    printer flips.</li>
+    <li>Cut along the dashed lines. Card stock works nicely but plain paper is fine.</li>
+  </ul>
+  <p><b>Test one sheet first</b> and scan the QR code with your phone before printing the rest.</p>
+</div>
+
+<!-- ============ PAGE 1: FRONTS ============ -->
+<div class="sheet">
+
+  <div class="card front">
+    <p class="kicker">Live sourdough starter</p>
+    <h1>Snow</h1>
+    <p class="sub">dried flakes &middot; just add flour and water</p>
+    <div class="rule"></div>
+    <p class="pitch">These papery flakes are a sleeping sourdough culture.
+    In about a week of two-minute daily jobs, they become a bubbling starter
+    that will raise a loaf of bread.</p>
+    <div class="qrbox"><img src="../assets/qr.png" alt="QR code"></div>
+    <p class="scan">Full instructions, troubleshooting and recipes:</p>
+    <p class="url">athelen20.github.io/sourdough</p>
+    <p class="foot">Turn over for the quick start &rarr;</p>
+  </div>
+
+  <div class="card front">
+    <p class="kicker">Live sourdough starter</p>
+    <h1>Snow</h1>
+    <p class="sub">dried flakes &middot; just add flour and water</p>
+    <div class="rule"></div>
+    <p class="pitch">These papery flakes are a sleeping sourdough culture.
+    In about a week of two-minute daily jobs, they become a bubbling starter
+    that will raise a loaf of bread.</p>
+    <div class="qrbox"><img src="../assets/qr.png" alt="QR code"></div>
+    <p class="scan">Full instructions, troubleshooting and recipes:</p>
+    <p class="url">athelen20.github.io/sourdough</p>
+    <p class="foot">Turn over for the quick start &rarr;</p>
+  </div>
+
+  <div class="card front">
+    <p class="kicker">Live sourdough starter</p>
+    <h1>Snow</h1>
+    <p class="sub">dried flakes &middot; just add flour and water</p>
+    <div class="rule"></div>
+    <p class="pitch">These papery flakes are a sleeping sourdough culture.
+    In about a week of two-minute daily jobs, they become a bubbling starter
+    that will raise a loaf of bread.</p>
+    <div class="qrbox"><img src="../assets/qr.png" alt="QR code"></div>
+    <p class="scan">Full instructions, troubleshooting and recipes:</p>
+    <p class="url">athelen20.github.io/sourdough</p>
+    <p class="foot">Turn over for the quick start &rarr;</p>
+  </div>
+
+  <div class="card front">
+    <p class="kicker">Live sourdough starter</p>
+    <h1>Snow</h1>
+    <p class="sub">dried flakes &middot; just add flour and water</p>
+    <div class="rule"></div>
+    <p class="pitch">These papery flakes are a sleeping sourdough culture.
+    In about a week of two-minute daily jobs, they become a bubbling starter
+    that will raise a loaf of bread.</p>
+    <div class="qrbox"><img src="../assets/qr.png" alt="QR code"></div>
+    <p class="scan">Full instructions, troubleshooting and recipes:</p>
+    <p class="url">athelen20.github.io/sourdough</p>
+    <p class="foot">Turn over for the quick start &rarr;</p>
+  </div>
+
+</div>
+
+<!-- ============ PAGE 2: BACKS ============ -->
+<div class="sheet">
+
+  <div class="card back">
+    <p class="btitle">Waking Snow up</p>
+    <p class="bsub">You need a scale, a jar, bread flour and a warm spot.</p>
+    <ol>
+      <li><b>Day 1.</b> Tip the flakes into a jar with <b>25&nbsp;g warm water</b>. Wait 2&ndash;4&nbsp;h until dissolved, then stir in <b>25&nbsp;g bread flour</b>. Cover loosely, keep warm.</li>
+      <li><b>Day 2.</b> Probably nothing yet. Add <b>25&nbsp;g water + 25&nbsp;g flour</b>.</li>
+      <li><b>Day 3.</b> Bubbles, odd smell. Now start discarding: keep <b>25&nbsp;g</b>, bin the rest, feed <b>25&nbsp;g + 25&nbsp;g</b>.</li>
+      <li><b>Days 4&ndash;7.</b> Same again, <b>every 12 hours</b>.</li>
+    </ol>
+    <div class="ready"><b>Ready when</b> it reliably doubles within 4&ndash;8&nbsp;h, domes on top, and smells tangy rather than of solvent. Usually 5&ndash;7 days, sometimes 10.</div>
+    <p class="btitle2">Then keep it alive</p>
+    <p class="keep">Keep it in the fridge and feed <b>once a week</b>: keep 25&nbsp;g, add 25&nbsp;g water and 25&nbsp;g flour. Before baking, feed it once or twice at room temperature to wake it up.</p>
+    <p class="dontpanic"><b>Don&rsquo;t panic:</b> dark liquid on top just means it&rsquo;s hungry, and a sharp cheesy smell is normal early on. Only bin it for fuzzy mould or pink streaks.</p>
+    <div class="tail">
+      <img src="../assets/qr.png" alt="QR code">
+      <span><b>athelen20.github.io/sourdough</b>Troubleshooting, feeding, loaf and discard recipes. Day three always looks alarming &mdash; keep going.</span>
+    </div>
+  </div>
+
+  <div class="card back">
+    <p class="btitle">Waking Snow up</p>
+    <p class="bsub">You need a scale, a jar, bread flour and a warm spot.</p>
+    <ol>
+      <li><b>Day 1.</b> Tip the flakes into a jar with <b>25&nbsp;g warm water</b>. Wait 2&ndash;4&nbsp;h until dissolved, then stir in <b>25&nbsp;g bread flour</b>. Cover loosely, keep warm.</li>
+      <li><b>Day 2.</b> Probably nothing yet. Add <b>25&nbsp;g water + 25&nbsp;g flour</b>.</li>
+      <li><b>Day 3.</b> Bubbles, odd smell. Now start discarding: keep <b>25&nbsp;g</b>, bin the rest, feed <b>25&nbsp;g + 25&nbsp;g</b>.</li>
+      <li><b>Days 4&ndash;7.</b> Same again, <b>every 12 hours</b>.</li>
+    </ol>
+    <div class="ready"><b>Ready when</b> it reliably doubles within 4&ndash;8&nbsp;h, domes on top, and smells tangy rather than of solvent. Usually 5&ndash;7 days, sometimes 10.</div>
+    <p class="btitle2">Then keep it alive</p>
+    <p class="keep">Keep it in the fridge and feed <b>once a week</b>: keep 25&nbsp;g, add 25&nbsp;g water and 25&nbsp;g flour. Before baking, feed it once or twice at room temperature to wake it up.</p>
+    <p class="dontpanic"><b>Don&rsquo;t panic:</b> dark liquid on top just means it&rsquo;s hungry, and a sharp cheesy smell is normal early on. Only bin it for fuzzy mould or pink streaks.</p>
+    <div class="tail">
+      <img src="../assets/qr.png" alt="QR code">
+      <span><b>athelen20.github.io/sourdough</b>Troubleshooting, feeding, loaf and discard recipes. Day three always looks alarming &mdash; keep going.</span>
+    </div>
+  </div>
+
+  <div class="card back">
+    <p class="btitle">Waking Snow up</p>
+    <p class="bsub">You need a scale, a jar, bread flour and a warm spot.</p>
+    <ol>
+      <li><b>Day 1.</b> Tip the flakes into a jar with <b>25&nbsp;g warm water</b>. Wait 2&ndash;4&nbsp;h until dissolved, then stir in <b>25&nbsp;g bread flour</b>. Cover loosely, keep warm.</li>
+      <li><b>Day 2.</b> Probably nothing yet. Add <b>25&nbsp;g water + 25&nbsp;g flour</b>.</li>
+      <li><b>Day 3.</b> Bubbles, odd smell. Now start discarding: keep <b>25&nbsp;g</b>, bin the rest, feed <b>25&nbsp;g + 25&nbsp;g</b>.</li>
+      <li><b>Days 4&ndash;7.</b> Same again, <b>every 12 hours</b>.</li>
+    </ol>
+    <div class="ready"><b>Ready when</b> it reliably doubles within 4&ndash;8&nbsp;h, domes on top, and smells tangy rather than of solvent. Usually 5&ndash;7 days, sometimes 10.</div>
+    <p class="btitle2">Then keep it alive</p>
+    <p class="keep">Keep it in the fridge and feed <b>once a week</b>: keep 25&nbsp;g, add 25&nbsp;g water and 25&nbsp;g flour. Before baking, feed it once or twice at room temperature to wake it up.</p>
+    <p class="dontpanic"><b>Don&rsquo;t panic:</b> dark liquid on top just means it&rsquo;s hungry, and a sharp cheesy smell is normal early on. Only bin it for fuzzy mould or pink streaks.</p>
+    <div class="tail">
+      <img src="../assets/qr.png" alt="QR code">
+      <span><b>athelen20.github.io/sourdough</b>Troubleshooting, feeding, loaf and discard recipes. Day three always looks alarming &mdash; keep going.</span>
+    </div>
+  </div>
+
+  <div class="card back">
+    <p class="btitle">Waking Snow up</p>
+    <p class="bsub">You need a scale, a jar, bread flour and a warm spot.</p>
+    <ol>
+      <li><b>Day 1.</b> Tip the flakes into a jar with <b>25&nbsp;g warm water</b>. Wait 2&ndash;4&nbsp;h until dissolved, then stir in <b>25&nbsp;g bread flour</b>. Cover loosely, keep warm.</li>
+      <li><b>Day 2.</b> Probably nothing yet. Add <b>25&nbsp;g water + 25&nbsp;g flour</b>.</li>
+      <li><b>Day 3.</b> Bubbles, odd smell. Now start discarding: keep <b>25&nbsp;g</b>, bin the rest, feed <b>25&nbsp;g + 25&nbsp;g</b>.</li>
+      <li><b>Days 4&ndash;7.</b> Same again, <b>every 12 hours</b>.</li>
+    </ol>
+    <div class="ready"><b>Ready when</b> it reliably doubles within 4&ndash;8&nbsp;h, domes on top, and smells tangy rather than of solvent. Usually 5&ndash;7 days, sometimes 10.</div>
+    <p class="btitle2">Then keep it alive</p>
+    <p class="keep">Keep it in the fridge and feed <b>once a week</b>: keep 25&nbsp;g, add 25&nbsp;g water and 25&nbsp;g flour. Before baking, feed it once or twice at room temperature to wake it up.</p>
+    <p class="dontpanic"><b>Don&rsquo;t panic:</b> dark liquid on top just means it&rsquo;s hungry, and a sharp cheesy smell is normal early on. Only bin it for fuzzy mould or pink streaks.</p>
+    <div class="tail">
+      <img src="../assets/qr.png" alt="QR code">
+      <span><b>athelen20.github.io/sourdough</b>Troubleshooting, feeding, loaf and discard recipes. Day three always looks alarming &mdash; keep going.</span>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
