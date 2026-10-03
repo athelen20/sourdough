@@ -3,7 +3,7 @@
 Instructions for reviving dried sourdough starter flakes, keeping the culture alive,
 and baking with it.
 
-**Live site: https://athelen20.github.io/sourdough/**
+**Live site: https://finandstar.github.io/sourdough/**
 
 Snow is a sourdough culture that came via a Portuguese baker teaching a class in town.
 It is maintained on King Arthur bread flour at 100% hydration. Dried flakes of it get
