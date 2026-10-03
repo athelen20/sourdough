@@ -20,6 +20,7 @@ handed out to anyone who wants some; this site is what the card in the packet po
 | `troubleshooting.html` | Hooch, smells, mould, no activity |
 | `share.html` | Drying your own flakes to pass on |
 | `glossary.html` | Sourdough terminology |
+| `give.html` | Give Month call to action and charities that feed people |
 | `contact.html` | Questions, feedback, and credits |
 | `recipes/` | Loaf, add-ins, mini loaves, pita, pizza, pancakes, crackers, cheese crackers, chocolate muffins, cinnamon rolls, tortillas |
 | `recipes/new-recipe-prompt.html` | Editable Copilot prompt that writes a new recipe page in the house style |
@@ -43,6 +44,9 @@ fresh, and the workshop is credited on `contact.html`.
 with a QR code pointing at the live site. Open it in a browser and print at 100% scale
 with background graphics enabled.
 
+`card/table-sign.html` is a one-page Letter sign for the table the packets sit on. It
+carries both QR codes, clearly labelled: the instructions site and `aka.ms/give`.
+
 A local copy at `card/card-print.html` carries personal contact details and is
 deliberately git-ignored, so those details are never published.
 
@@ -60,12 +64,14 @@ JavaScript. Edit a file, commit, and GitHub Pages publishes it.
 +-- troubleshooting.html
 +-- share.html
 +-- glossary.html
++-- give.html
 +-- contact.html
 +-- assets/
 �   +-- style.css
 �   +-- qr.png
+�   +-- qr-give.png
 �   +-- img/
-�       +-- jar.svg, loaf.svg, flakes.svg, minis.svg, discard.svg
+�       +-- jar.svg, loaf.svg, flakes.svg, minis.svg, discard.svg, give.svg
 +-- recipes/
 �   +-- index.html
 �   +-- new-recipe-prompt.html

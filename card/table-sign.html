@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<title>Snow &mdash; table sign</title>
+<style>
+  @page { size: letter portrait; margin: 0; }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #32241a;
+    background: #e9e2d6;
+  }
+
+  .note {
+    max-width: 8.5in;
+    margin: 0.3in auto;
+    padding: 0.2in;
+    background: #fffdf9;
+    border: 1px solid #d9cbb4;
+    border-radius: 8px;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  .note h2 { margin: 0 0 0.08in; font-size: 13pt; color: #6f4220; }
+
+  .sign {
+    width: 8.5in;
+    height: 11in;
+    background: #fff;
+    margin: 0 auto;
+    padding: 0.7in 0.75in 0.55in;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .kicker {
+    font-size: 13pt;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: #a08765;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 86pt;
+    line-height: 0.95;
+    margin: 0.06in 0 0.04in;
+    color: #6f4220;
+    letter-spacing: -0.02em;
+  }
+
+  .sub {
+    font-size: 17pt;
+    font-style: italic;
+    color: #7a6755;
+    margin: 0 0 0.16in;
+  }
+
+  .rule { width: 2.2in; border-top: 3px solid #c9743b; margin: 0 0 0.22in; }
+
+  .take {
+    font-size: 23pt;
+    font-weight: 800;
+    color: #32241a;
+    margin: 0 0 0.1in;
+  }
+
+  .pitch {
+    font-size: 13.5pt;
+    line-height: 1.5;
+    max-width: 6in;
+    margin: 0 0 0.3in;
+  }
+
+  .cols {
+    display: flex;
+    gap: 0.5in;
+    width: 100%;
+    margin-top: auto;
+  }
+
+  .col {
+    flex: 1;
+    border: 2px solid #e7dac7;
+    border-radius: 10pt;
+    padding: 0.2in 0.16in 0.18in;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col.give { background: #f9f3e8; border-color: #e0cdb0; }
+
+  .col h3 {
+    font-size: 13pt;
+    margin: 0 0 0.04in;
+    color: #6f4220;
+  }
+
+  .col .lead {
+    font-size: 10pt;
+    line-height: 1.35;
+    color: #5f4f3f;
+    margin: 0 0 0.12in;
+    min-height: 0.52in;
+  }
+
+  .col img {
+    width: 2.05in;
+    height: 2.05in;
+    display: block;
+    border: 2px solid #e7dac7;
+    border-radius: 7pt;
+    background: #fff;
+    padding: 4pt;
+  }
+
+  .col .url {
+    font-size: 11pt;
+    font-weight: 800;
+    color: #6f4220;
+    margin: 0.11in 0 0;
+    word-break: break-all;
+  }
+
+  .col .tiny {
+    font-size: 8.5pt;
+    line-height: 1.3;
+    color: #8a7866;
+    margin: 0.06in 0 0;
+  }
+
+  .foot {
+    font-size: 10pt;
+    color: #a08765;
+    margin: 0.26in 0 0;
+  }
+
+  @media print {
+    body { background: #fff; }
+    .note { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="note">
+  <h2>Printing this sign</h2>
+  <p>One US Letter page, portrait. Print at <b>100%</b> scale with <b>Background graphics</b>
+  turned on and margins set to <b>None</b>. Card stock stands up better in a frame or an
+  acrylic sign holder. Scan both QR codes before you print a stack.</p>
+</div>
+
+<div class="sign">
+
+  <p class="kicker">Live sourdough starter</p>
+  <h1>Snow</h1>
+  <p class="sub">dried flakes &middot; just add flour and water</p>
+  <div class="rule"></div>
+
+  <p class="take">Take a packet &mdash; they&rsquo;re free</p>
+  <p class="pitch">Those papery flakes are a sleeping sourdough culture. Add flour and water,
+  keep them somewhere warm, and in about a week you have a starter that will raise a loaf
+  of bread. Full instructions, troubleshooting and recipes are on the site.</p>
+
+  <div class="cols">
+
+    <div class="col">
+      <h3>How to wake them up</h3>
+      <p class="lead">Day-by-day instructions, what to do when it smells strange, and what
+      to bake once it works.</p>
+      <img src="../assets/qr.png" alt="QR code to the instructions site">
+      <p class="url">athelen20.github.io/sourdough</p>
+      <p class="tiny">Also printed on the card in your packet.</p>
+    </div>
+
+    <div class="col give">
+      <h3>It&rsquo;s Give Month</h3>
+      <p class="lead">These are free. If the bread works out, consider <b>$5 to a charity
+      that feeds people</b> &mdash; and Microsoft will match it.</p>
+      <img src="../assets/qr-give.png" alt="QR code to aka.ms/give">
+      <p class="url">aka.ms/give</p>
+      <p class="tiny">Entirely optional. Nobody is counting.</p>
+    </div>
+
+  </div>
+
+  <p class="foot">Day three always looks and smells alarming. Keep going &mdash; it almost always works.</p>
+
+</div>
+
+</body>
+</html>
