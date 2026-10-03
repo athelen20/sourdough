@@ -55,6 +55,25 @@ starter came from, including the student guide handed out on the day. That guide
 else's copyrighted work and is **not** reproduced here: everything on these pages is written
 fresh, and the workshop is credited on `contact.html`.
 
+## Navigation
+
+The top nav carries the nine task-oriented pages. **Glossary and Contact are deliberately
+not in it** — at nine items the nav already wraps to three rows on a 390px phone, and two
+more would make it four. They live in the footer sitemap instead, which appears on every
+page and groups everything into Start here / Keep it going / More.
+
+## Link previews
+
+Every page carries Open Graph and Twitter card meta, so pasting a link into Teams, Slack
+or iMessage produces a proper preview card rather than a bare URL. The preview image is
+`assets/og.png` (1200×630). To regenerate it, build the layout as HTML and screenshot it
+in a browser at that size — rendering the SVG directly loses the gradients.
+
+## Accessibility
+
+Each page starts with a skip link, wraps its content in a `<main id="main">` landmark, and
+has a visible focus ring via `:focus-visible`. Keep those if you hand-edit a page.
+
 ## Printing
 
 `card/card.html` is the gift card: four to a US Letter sheet, double-sided. Print at 100%
