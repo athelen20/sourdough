@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-labelledby="t">
+<title id="t">A tray of small round sourdough rolls baked in a muffin tin</title>
+<rect width="320" height="200" fill="#fdf7ee"/>
+
+<!-- tin -->
+<rect x="26" y="62" width="268" height="112" rx="12" fill="#e9e2d6" stroke="#bfb3a0" stroke-width="3"/>
+<rect x="26" y="62" width="268" height="16" rx="8" fill="#d8cfbe"/>
+
+<!-- wells -->
+<g fill="#d3c9b6">
+  <ellipse cx="82" cy="106" rx="34" ry="15"/>
+  <ellipse cx="160" cy="106" rx="34" ry="15"/>
+  <ellipse cx="238" cy="106" rx="34" ry="15"/>
+  <ellipse cx="82" cy="148" rx="34" ry="15"/>
+  <ellipse cx="160" cy="148" rx="34" ry="15"/>
+  <ellipse cx="238" cy="148" rx="34" ry="15"/>
+</g>
+
+<!-- back row rolls -->
+<g stroke="#8a5223" stroke-width="2.8">
+  <path d="M50 108 a32 26 0 0 1 64 0 z" fill="#d9a263"/>
+  <path d="M128 108 a32 26 0 0 1 64 0 z" fill="#cf9352"/>
+  <path d="M206 108 a32 26 0 0 1 64 0 z" fill="#d9a263"/>
+</g>
+<!-- scores on back row -->
+<g stroke="#8a5223" stroke-width="2.2" stroke-linecap="round" opacity="0.75">
+  <path d="M70 92 l24 0"/><path d="M82 84 l0 16"/>
+  <path d="M148 92 l24 0"/><path d="M160 84 l0 16"/>
+  <path d="M226 92 l24 0"/><path d="M238 84 l0 16"/>
+</g>
+
+<!-- front row rolls, one cheesy, one chocolate, one plain -->
+<g stroke="#8a5223" stroke-width="2.8">
+  <path d="M50 150 a32 26 0 0 1 64 0 z" fill="#e0b071"/>
+  <path d="M128 150 a32 26 0 0 1 64 0 z" fill="#8c6246"/>
+  <path d="M206 150 a32 26 0 0 1 64 0 z" fill="#d9a263"/>
+</g>
+<!-- cheese blobs -->
+<g fill="#e8c23f" opacity="0.9">
+  <circle cx="68" cy="138" r="5"/>
+  <circle cx="86" cy="130" r="6"/>
+  <circle cx="100" cy="140" r="4.5"/>
+</g>
+<!-- chocolate chips -->
+<g fill="#4b2f1f">
+  <circle cx="146" cy="138" r="4"/>
+  <circle cx="162" cy="130" r="4.5"/>
+  <circle cx="176" cy="140" r="3.6"/>
+</g>
+<!-- score on plain front roll -->
+<g stroke="#8a5223" stroke-width="2.2" stroke-linecap="round" opacity="0.75">
+  <path d="M226 134 l24 0"/><path d="M238 126 l0 16"/>
+</g>
+</svg>

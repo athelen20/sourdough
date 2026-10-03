@@ -172,6 +172,58 @@ li { margin: 0.35rem 0; }
 .cards a strong { display: block; color: var(--crust-dark); font-size: 1.05rem; }
 .cards a span { color: var(--muted); font-size: 0.92rem; }
 
+.illus {
+  display: block;
+  width: 100%;
+  max-width: 24rem;
+  height: auto;
+  margin: 1.5rem auto;
+}
+
+.illus.wide { max-width: 32rem; }
+
+.hero {
+  display: block;
+  width: 100%;
+  max-width: 26rem;
+  height: auto;
+  margin: 0.5rem auto 1rem;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.meta li {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.meta li b { color: var(--crust-dark); font-weight: 700; }
+
+.tag-active, .tag-discard {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.tag-active { background: #e4efdd; color: #3c5f31; }
+.tag-discard { background: #f6e8da; color: #8a5223; }
+
 footer.site {
   border-top: 1px solid var(--line);
   margin-top: 3rem;

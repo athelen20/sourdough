@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-labelledby="t">
+<title id="t">Dried sourdough starter flakes scattered beside a small paper packet</title>
+<rect width="320" height="200" fill="#fdf7ee"/>
+
+<!-- paper packet -->
+<path d="M150 56 h130 a6 6 0 0 1 6 6 v108 a6 6 0 0 1 -6 6 h-130 a6 6 0 0 1 -6 -6 v-108 a6 6 0 0 1 6 -6 z" fill="#fffdf9" stroke="#d9c6a6" stroke-width="3"/>
+<!-- folded flap -->
+<path d="M144 62 L215 104 L286 62" fill="none" stroke="#d9c6a6" stroke-width="3" stroke-linejoin="round"/>
+<!-- label -->
+<rect x="170" y="118" width="90" height="42" rx="4" fill="#f6efe3" stroke="#e0d0b4" stroke-width="2"/>
+<path d="M182 132 h66 M182 142 h66 M182 152 h40" stroke="#c9b394" stroke-width="3" stroke-linecap="round"/>
+
+<!-- flakes, scattered -->
+<g fill="#e4cfa8" stroke="#c2a677" stroke-width="1.6" stroke-linejoin="round">
+  <path d="M40 112 l20 -7 l10 12 l-15 10 z"/>
+  <path d="M68 142 l17 -10 l12 9 l-9 14 z"/>
+  <path d="M34 152 l14 -5 l6 11 l-13 6 z"/>
+  <path d="M96 118 l15 -9 l10 11 l-13 10 z"/>
+  <path d="M56 86 l13 -8 l9 9 l-11 10 z"/>
+  <path d="M100 158 l12 -7 l8 9 l-11 8 z"/>
+  <path d="M22 130 l11 -6 l7 9 l-10 7 z"/>
+  <path d="M86 92 l10 -6 l6 8 l-9 7 z"/>
+</g>
+</svg>

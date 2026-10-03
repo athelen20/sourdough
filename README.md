@@ -21,7 +21,14 @@ handed out to anyone who wants some; this site is what the card in the packet po
 | `share.html` | Drying your own flakes to pass on |
 | `glossary.html` | Sourdough terminology |
 | `contact.html` | Questions, feedback, and credits |
-| `recipes/` | Basic loaf, add-ins, discard pancakes, discard crackers |
+| `recipes/` | Loaf, add-ins, mini loaves, pita, pizza, pancakes, crackers, cheese crackers, chocolate muffins, cinnamon rolls, tortillas |
+| `recipes/new-recipe-prompt.html` | Editable Copilot prompt that writes a new recipe page in the house style |
+
+## Illustrations
+
+`assets/img/*.svg` are original line illustrations drawn for this site, in the site's
+palette. No stock images and no third-party assets, so there is nothing to license or
+attribute. They are plain SVG — edit them in a text editor or any vector tool.
 
 ## Source of the method
 
@@ -57,10 +64,20 @@ JavaScript. Edit a file, commit, and GitHub Pages publishes it.
 +-- assets/
 �   +-- style.css
 �   +-- qr.png
+�   +-- img/
+�       +-- jar.svg, loaf.svg, flakes.svg, minis.svg, discard.svg
 +-- recipes/
 �   +-- index.html
+�   +-- new-recipe-prompt.html
 �   +-- basic-loaf.html
 �   +-- inclusions.html
+�   +-- mini-loaves.html
+�   +-- pita.html
+�   +-- pizza.html
+�   +-- tortillas.html
+�   +-- cinnamon-rolls.html
+�   +-- chocolate-muffins.html
+�   +-- cheese-crackers.html
 �   +-- discard-pancakes.html
 �   +-- discard-crackers.html
 +-- card/

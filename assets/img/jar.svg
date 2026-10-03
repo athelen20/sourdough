@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-labelledby="t">
+<title id="t">A jar of bubbling sourdough starter beside a bag of flour</title>
+<defs>
+  <clipPath id="jarclip"><rect x="112" y="58" width="96" height="112" rx="8"/></clipPath>
+</defs>
+<rect width="320" height="200" fill="#fdf7ee"/>
+
+<!-- flour bag -->
+<path d="M34 196 L34 108 Q34 98 44 96 L52 94 Q58 86 66 94 L74 96 Q84 98 84 108 L84 196 Z" fill="#f3e7d2" stroke="#d9c6a6" stroke-width="2.5"/>
+<path d="M44 96 Q59 88 74 96" fill="none" stroke="#d9c6a6" stroke-width="2.5"/>
+<rect x="44" y="128" width="30" height="34" rx="3" fill="#fffdf9" stroke="#d9c6a6" stroke-width="2"/>
+<path d="M50 140 h18 M50 147 h18 M50 154 h11" stroke="#c9b394" stroke-width="2.4" stroke-linecap="round"/>
+
+<!-- jar body -->
+<rect x="112" y="58" width="96" height="112" rx="8" fill="#fffdf9" stroke="#9a5f2e" stroke-width="3"/>
+<!-- starter inside -->
+<g clip-path="url(#jarclip)">
+  <path d="M112 112 q12 -12 24 -2 t24 -3 t24 2 t24 -5 v66 h-96 z" fill="#f0dfc0"/>
+  <circle cx="132" cy="134" r="7" fill="#fdf7ee" opacity="0.85"/>
+  <circle cx="156" cy="150" r="5" fill="#fdf7ee" opacity="0.85"/>
+  <circle cx="180" cy="130" r="6" fill="#fdf7ee" opacity="0.85"/>
+  <circle cx="146" cy="160" r="4" fill="#fdf7ee" opacity="0.8"/>
+  <circle cx="192" cy="155" r="4.5" fill="#fdf7ee" opacity="0.8"/>
+  <circle cx="168" cy="118" r="4" fill="#fdf7ee" opacity="0.8"/>
+  <circle cx="124" cy="150" r="4.5" fill="#fdf7ee" opacity="0.8"/>
+</g>
+<!-- rubber band marking the feed level -->
+<rect x="109" y="124" width="102" height="7" rx="3.5" fill="#c9743b" opacity="0.9"/>
+<!-- lid -->
+<rect x="104" y="40" width="112" height="20" rx="6" fill="#9a5f2e"/>
+<rect x="104" y="40" width="112" height="7" rx="3.5" fill="#6f4220" opacity="0.4"/>
+<!-- escaping gas -->
+<path d="M140 32 q6 -10 0 -18" fill="none" stroke="#c9b394" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M163 28 q7 -12 0 -22" fill="none" stroke="#c9b394" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M186 32 q6 -10 0 -18" fill="none" stroke="#c9b394" stroke-width="2.5" stroke-linecap="round"/>
+
+<!-- scale -->
+<rect x="232" y="150" width="68" height="20" rx="5" fill="#f3e7d2" stroke="#d9c6a6" stroke-width="2.5"/>
+<rect x="244" y="156" width="26" height="9" rx="2" fill="#fffdf9" stroke="#d9c6a6" stroke-width="1.6"/>
+<rect x="238" y="140" width="56" height="10" rx="3" fill="#e7dac7"/>
+</svg>

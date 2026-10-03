@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Make a new recipe card &mdash; Snow</title>
+<meta name="description" content="An editable prompt for generating a new sourdough recipe card with Copilot.">
+<link rel="stylesheet" href="../assets/style.css">
+<style>
+  .prompt {
+    width: 100%;
+    min-height: 30rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    padding: 1rem;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--card);
+    color: var(--ink);
+    resize: vertical;
+  }
+  .promptbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-items: center;
+    margin: 0.75rem 0 0;
+  }
+  .btn {
+    background: var(--accent);
+    color: #fff;
+    border: 0;
+    font: inherit;
+    font-weight: 700;
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .btn:hover { background: var(--crust-dark); }
+  .btn.sec { background: transparent; color: var(--accent); border: 1px solid var(--line); }
+  .btn.sec:hover { background: var(--card); color: var(--crust-dark); }
+  .said { font-size: 0.85rem; color: var(--good); font-weight: 700; }
+  .fill {
+    background: #f6e8da;
+    border-radius: 4px;
+    padding: 0.05rem 0.3rem;
+    font-weight: 700;
+    color: var(--crust-dark);
+  }
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a class="home" href="../">Snow &mdash; a sourdough starter</a>
+    <p class="tag">Dried flakes, passed hand to hand. Here is how to wake them up.</p>
+    <nav class="main">
+      <a href="../">Home</a>
+      <a href="../revive.html">Revive</a>
+      <a href="../feeding.html">Feeding</a>
+      <a href="../method.html">The method</a>
+      <a href="./">Recipes</a>
+      <a href="../troubleshooting.html">Troubleshooting</a>
+      <a href="../share.html">Share it on</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+<h1>Make a new recipe card</h1>
+<p class="lede">A ready-made prompt for Copilot, or any other assistant, that produces a new
+recipe written in the same style and format as the rest of these pages.</p>
+
+<div class="panel tip">
+  <h3>How to use it</h3>
+  <ol>
+    <li>Change the <span class="fill">three lines at the top</span> &mdash; what you want to
+        make, whether it uses active starter or discard, and anything else that matters.</li>
+    <li>Press <strong>Copy</strong>.</li>
+    <li>Paste it into Copilot and send.</li>
+  </ol>
+  <p class="small muted">Everything below the top three lines is the house style, and is worth
+  leaving alone unless you want to change how all the pages read.</p>
+</div>
+
+<textarea class="prompt" id="p" spellcheck="false">
+=== EDIT THESE THREE LINES ===============================================
+WHAT I WANT TO MAKE: focaccia with rosemary and sea salt
+STARTER TYPE: active starter at peak        (or: discard, straight from the fridge)
+ANYTHING ELSE: should be doable in one day, no overnight proof
+==========================================================================
+
+Write this up as a single recipe page for my sourdough website.
+
+ABOUT THE SITE
+The site documents a sourdough starter called Snow that I hand out as dried
+flakes. It already has pages for reviving the flakes, feeding the starter, the
+general bread method, and a handful of recipes. Readers are mostly beginners
+who have never baked with sourdough before.
+
+HOUSE RULES
+- Metric by weight, in grams. Never cups. Oven temperatures in Celsius with
+  Fahrenheit in brackets.
+- Plain British English. Calm, dry, direct. No exclamation marks, no "delicious",
+  no "perfect", no marketing voice, no emoji.
+- Explain WHY a step matters when it is not obvious, in one short sentence.
+  Assume the reader has never done it before and will panic at the first odd
+  smell or slack dough.
+- Be honest about timing. Say what the dough should LOOK like, not just how many
+  hours, because kitchen temperature changes everything.
+- Include a short troubleshooting section for the two or three things most
+  likely to go wrong, with the actual cause rather than vague reassurance.
+- Never claim a recipe is foolproof.
+
+WHAT TO PRODUCE
+A complete, standalone HTML file, ready to drop into the recipes folder. Match
+the existing pages exactly:
+
+1. Standard head: utf-8, viewport, robots noindex/nofollow, title
+   "<Recipe name> — Snow", a one-line meta description, and
+   <link rel="stylesheet" href="../assets/style.css">
+2. The standard site header with the full nav (Home, Revive, Feeding,
+   The method, Recipes, Troubleshooting, Share it on) using ../ paths, and
+   <a href="./">Recipes</a> for the recipes link.
+3. <div class="wrap"> containing:
+   - <h1> recipe name
+   - <p class="lede"> two sentences saying what it is and why it is worth making
+   - <p><span class="tag-active">Needs active starter</span></p>
+     or <span class="tag-discard">Uses discard</span>
+   - <ul class="meta"> with three <li> items: yield, total time, bake
+     temperature and time. Bold the numbers with <b>.
+   - Ingredients as a <table> with <th>Ingredient</th> and
+     <th class="num">Amount</th>, amounts in <td class="num">.
+   - The method. Use <div class="day"><span class="label">Step 1 · what</span>
+     ...</div> blocks for anything with waiting between stages, or a plain
+     <ol> for a quick recipe.
+   - Notes in <div class="panel tip">, warnings in <div class="panel warn">,
+     reassurance in <div class="panel good">, neutral asides in <div class="panel">.
+     Each panel starts with an <h3>.
+   - A short "Keeping them" section at the end.
+4. The standard footer:
+   Snow — shared at Teams Week. <a href="../contact.html">Get in touch</a>.
+
+Use &nbsp; between numbers and units (500&nbsp;g, 220&nbsp;&deg;C). Use &mdash;
+for dashes and &ndash; for ranges. No inline styles. No JavaScript. Do not
+invent new CSS classes — only use the ones listed above.
+
+Finally, tell me the filename you would use and one line I can paste into the
+recipes index page to link to it.
+</textarea>
+
+<div class="promptbar">
+  <button class="btn" id="copy">Copy the prompt</button>
+  <button class="btn sec" id="reset">Reset</button>
+  <span class="said" id="said" hidden>Copied</span>
+</div>
+
+<h2>What you get back</h2>
+<p>A finished HTML file in the same visual style as every other recipe here, plus the filename
+and the one-line snippet to add it to the <a href="./">recipes index</a>. Save the file into
+the <code>recipes/</code> folder, paste the snippet into <code>recipes/index.html</code>,
+commit, and it is live.</p>
+
+<div class="panel warn">
+  <h3>Check it before you trust it</h3>
+  <p>An assistant will confidently invent a hydration, a bake time or a proofing window that
+  is simply wrong. Before you publish anything, sanity-check the numbers against a recipe you
+  already trust, and ideally <strong>bake it once</strong>. The whole point of these pages is
+  that someone unfamiliar with sourdough can follow them and get bread.</p>
+</div>
+
+<h2>Things worth asking for</h2>
+<ul>
+  <li><strong>A same-day version</strong> as well as the overnight one. Many people will not
+      plan 18 hours ahead.</li>
+  <li><strong>What to do with the leftovers</strong>, or how it freezes.</li>
+  <li><strong>A flavour variations table</strong>, as on the
+      <a href="mini-loaves.html">mini loaves</a> page.</li>
+  <li><strong>Scaling</strong> &mdash; half quantities, or double.</li>
+  <li><strong>Which step is the one people get wrong</strong>, called out explicitly.</li>
+</ul>
+
+<script>
+(function () {
+  var box = document.getElementById('p');
+  var original = box.value;
+  document.getElementById('copy').addEventListener('click', function () {
+    box.select();
+    navigator.clipboard.writeText(box.value).then(function () {
+      var s = document.getElementById('said');
+      s.hidden = false;
+      setTimeout(function () { s.hidden = true; }, 2000);
+    });
+  });
+  document.getElementById('reset').addEventListener('click', function () {
+    box.value = original;
+  });
+})();
+</script>
+
+</div>
+
+<footer class="site">
+  <div class="inner">
+    <p>Snow &mdash; shared at Teams Week. <a href="../contact.html">Get in touch</a>.</p>
+  </div>
+</footer>
+</body>
+</html>
