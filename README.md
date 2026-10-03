@@ -26,19 +26,32 @@ handed out to anyone who wants some; this site is what the card in the packet po
 | `recipes/` | Loaf, add-ins, mini loaves, pita, pizza, pancakes, crackers, cheese crackers, chocolate muffins, cinnamon rolls, tortillas |
 | `recipes/new-recipe-prompt.html` | Editable Copilot prompt that writes a new recipe page in the house style |
 
+## House style
+
+- **No en dashes or em dashes anywhere.** Plain hyphens only, in content and in printable
+  artwork. The audit script fails the build if one appears, including the HTML entities
+  `&mdash;` and `&ndash;`.
+- Sentence case for headings and labels. No all-caps in running text.
+- Metric, by weight, in grams. Celsius with Fahrenheit in brackets.
+
 ## Illustrations
 
 `assets/img/*.svg` are original line illustrations drawn for this site, in the site's
 palette. No stock images and no third-party assets, so there is nothing to license or
-attribute. They are plain SVG — edit them in a text editor or any vector tool.
+attribute. They are plain SVG - edit them in a text editor or any vector tool.
 
 Use presentation attributes (`fill`, `stroke`) directly on elements rather than a `<style>`
-block: some renderers ignore embedded CSS. Only numeric character entities (`&#8212;`) are
-valid in SVG, not HTML named ones (`&mdash;`).
+block: some renderers ignore embedded CSS. Only numeric character entities (`-`) are
+valid in SVG, not HTML named ones (`-`).
 
 `assets/img/scoring.svg` is a deliberate redraw. Scoring patterns themselves are traditional
 and functional, so the information is free to use, but existing published charts of them are
 copyrighted artwork and are not reproduced here.
+
+`assets/img/give-icon.svg` is an original drawing of a heart in an open hand. It is **not**
+the Microsoft Give logo and is not a Microsoft brand asset: those are trademarked and cannot
+be reproduced on a personal site. If an official badge is ever wanted here, it has to come
+from the brand team with permission.
 
 ## Tested vs collected
 
@@ -58,7 +71,7 @@ fresh, and the workshop is credited on `contact.html`.
 ## Navigation
 
 The top nav carries the nine task-oriented pages. **Glossary and Contact are deliberately
-not in it** — at nine items the nav already wraps to three rows on a 390px phone, and two
+not in it** - at nine items the nav already wraps to three rows on a 390px phone, and two
 more would make it four. They live in the footer sitemap instead, which appears on every
 page and groups everything into Start here / Keep it going / More.
 
@@ -67,7 +80,7 @@ page and groups everything into Start here / Keep it going / More.
 Every page carries Open Graph and Twitter card meta, so pasting a link into Teams, Slack
 or iMessage produces a proper preview card rather than a bare URL. The preview image is
 `assets/og.png` (1200×630). To regenerate it, build the layout as HTML and screenshot it
-in a browser at that size — rendering the SVG directly loses the gradients.
+in a browser at that size - rendering the SVG directly loses the gradients.
 
 ## Accessibility
 
@@ -81,7 +94,7 @@ Reader actually ships) with WCAG 2.1 AA as the target, which is the level Micros
 recommends for general content.
 
 Worth knowing: **Microsoft does not use a dyslexia-specific typeface.** Immersive Reader
-offers Calibri, Sitka and Comic Sans — no OpenDyslexic. The effort goes into size, spacing
+offers Calibri, Sitka and Comic Sans - no OpenDyslexic. The effort goes into size, spacing
 and contrast instead, which is what this site does too.
 
 What is in place, and must survive future edits:
@@ -91,7 +104,7 @@ What is in place, and must survive future edits:
 | Body text | 19px, line-height 1.65 (WCAG 1.4.12 needs content to survive 1.5) |
 | Text contrast | 4.5:1 minimum. `--accent` is text-safe; `--accent-bright` is decorative only |
 | Links | Colour **and** underline, never colour alone |
-| Headings | Sentence case. No all-caps in text — it destroys the word shapes people scan by |
+| Headings | Sentence case. No all-caps in text - it destroys the word shapes people scan by |
 | Targets | Interactive elements at least 24px, mostly 40px+ |
 | Reflow | No horizontal scroll at 320px. Wide tables go in `.scroller` |
 | Motion | `prefers-reduced-motion` honoured |
@@ -102,7 +115,7 @@ SVG validity and badge consistency.
 
 ## Interactive bits
 
-Both are progressive enhancement — they work, or sensibly do not appear, with JavaScript off.
+Both are progressive enhancement - they work, or sensibly do not appear, with JavaScript off.
 
 - **Revival tracker** (`revive.html`): a 12-step checklist stored in `localStorage` under
   `snow-revival-v1`. Per-browser, per-device, never sent anywhere. The progress bar and
@@ -110,7 +123,7 @@ Both are progressive enhancement — they work, or sensibly do not appear, with 
   Prints as a plain paper checklist.
 - **Recipe scaling** (`assets/scale.js`): add `data-scale` to an ingredient `<table>` whose
   amounts sit in `<td class="num">`. One control per page scales every marked table together.
-  Handles ranges (`1–2 tbsp`), formats fractions, leaves "a pinch" alone, and warns about
+  Handles ranges (`1-2 tbsp`), formats fractions, leaves "a pinch" alone, and warns about
   half-eggs. With JavaScript off, the written quantities stand and no control appears.
 
 ## Printing
@@ -121,7 +134,7 @@ scale with background graphics on and margins set to None.
 `card/table-sign.html` is a one-page Letter sign for the table the packets sit on, carrying
 both QR codes clearly labelled.
 
-Recipe and instruction pages have a print stylesheet — printing one from the browser drops
+Recipe and instruction pages have a print stylesheet - printing one from the browser drops
 the nav, footer and background colours, keeps steps from splitting across pages, and spells
 out external link targets. Useful for taking a recipe into the kitchen.
 

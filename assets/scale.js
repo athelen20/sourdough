@@ -84,7 +84,7 @@
       if (range) {
         var lo = round(parseFloat(range[1], 10) * factor);
         var hi = round(parseFloat(range[3], 10) * factor);
-        c.td.textContent = fmt(lo) + '\u2013' + fmt(hi) + range[4] + range[5];
+        c.td.textContent = fmt(lo) + '-' + fmt(hi) + range[4] + range[5];
         return;
       }
 
@@ -105,8 +105,8 @@
       note.textContent = 'Showing the standard batch.';
     } else {
       note.textContent = 'Showing a ' + label.toLowerCase()
-        + ' batch. Timings, oven temperature and tin size do not scale '
-        + '\u2014 use your eyes, and a smaller tin.'
+        + ' batch. Timings, oven temperature and tin size do not scale: '
+        + 'use your eyes, and a smaller tin.'
         + (awkward ? ' For part of an egg, beat one whole egg and weigh out '
                    + 'what you need: a large egg is about 50\u00a0g.' : '');
     }

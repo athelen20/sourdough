@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" role="img" aria-labelledby="t d">
+<title id="t">A jar of starter labelled Snow, an arrow, and a baked loaf.</title>
+<desc id="d">The jar of sourdough starter becomes a baked loaf of bread.</desc>
+
+<defs>
+  <linearGradient id="g-glass" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+    <stop offset="20%" stop-color="#ffffff" stop-opacity="0.4"/>
+    <stop offset="100%" stop-color="#d9c6a6" stop-opacity="0.28"/>
+  </linearGradient>
+  <linearGradient id="g-starter" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#f3e3c2"/>
+    <stop offset="100%" stop-color="#e0c795"/>
+  </linearGradient>
+  <linearGradient id="g-lid" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#b5763c"/>
+    <stop offset="100%" stop-color="#7d4718"/>
+  </linearGradient>
+  <linearGradient id="g-bake" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#e3a966"/>
+    <stop offset="48%" stop-color="#c9813f"/>
+    <stop offset="100%" stop-color="#a4612b"/>
+  </linearGradient>
+  <linearGradient id="g-ear" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#f6e2bd"/>
+    <stop offset="100%" stop-color="#dcb176"/>
+  </linearGradient>
+  <clipPath id="c-jar"><rect x="22" y="38" width="62" height="86" rx="7"/></clipPath>
+</defs>
+
+<!-- ============ JAR ============ -->
+<g fill="none" stroke="#d9c6a6" stroke-width="2" stroke-linecap="round" opacity="0.9">
+  <path d="M40 22 q4 -7 0 -13"/>
+  <path d="M53 18 q5 -8 0 -15"/>
+  <path d="M66 22 q4 -7 0 -13"/>
+</g>
+
+<rect x="22" y="38" width="62" height="86" rx="7" fill="#fffdf9" stroke="#9a5f2e" stroke-width="2.6"/>
+
+<g clip-path="url(#c-jar)">
+  <path d="M22 70 q8 -8 16 -1 t15 -2 t16 2 t15 -4 v59 h-62 z" fill="url(#g-starter)"/>
+  <g fill="#fffdf9" opacity="0.9">
+    <circle cx="36" cy="86" r="4.6"/>
+    <circle cx="54" cy="98" r="3.4"/>
+    <circle cx="70" cy="84" r="3.8"/>
+    <circle cx="45" cy="108" r="2.8"/>
+    <circle cx="66" cy="107" r="2.6"/>
+  </g>
+  <rect x="22" y="38" width="62" height="86" fill="url(#g-glass)"/>
+</g>
+
+<rect x="19" y="79" width="68" height="4.6" rx="2.3" fill="#c9743b"/>
+
+<g transform="rotate(-2.5 53 104)">
+  <rect x="27" y="92" width="52" height="24" rx="3.5" fill="#fffdf9" stroke="#c9743b" stroke-width="2"/>
+  <text x="53" y="109"
+        font-family="Segoe Script, Bradley Hand, Comic Sans MS, cursive"
+        font-size="15" font-weight="700" fill="#6f4220" text-anchor="middle">Snow</text>
+</g>
+
+<g transform="rotate(-3 53 30)">
+  <rect x="16" y="21" width="74" height="15" rx="4.5" fill="url(#g-lid)"/>
+  <rect x="16" y="21" width="74" height="5" rx="2.5" fill="#f6ebd6" opacity="0.28"/>
+</g>
+
+<!-- ============ ARROW ============ -->
+<g stroke="#c9743b" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M104 82 h52"/>
+  <path d="M146 70 l14 12 l-14 12"/>
+</g>
+
+<!-- ============ LOAF ============ -->
+<ellipse cx="236" cy="122" rx="56" ry="5" fill="#c9b394" opacity="0.4"/>
+<path d="M186 120 Q180 84 202 70 Q220 58 236 58 Q252 58 270 70 Q292 84 286 120 Z"
+      fill="url(#g-bake)" stroke="#7d4718" stroke-width="2.6" stroke-linejoin="round"/>
+<path d="M186 120 Q182 100 192 92 Q222 108 280 92 Q290 100 286 120 Z" fill="#8d511f" opacity="0.24"/>
+<path d="M202 80 Q228 62 258 68 Q270 71 276 78 Q252 64 222 80 Q210 85 202 80 Z"
+      fill="url(#g-ear)" stroke="#7d4718" stroke-width="2.2" stroke-linejoin="round"/>
+<g fill="#8d511f" opacity="0.3">
+  <circle cx="208" cy="100" r="2"/>
+  <circle cx="228" cy="106" r="1.6"/>
+  <circle cx="250" cy="100" r="1.9"/>
+  <circle cx="268" cy="104" r="1.5"/>
+</g>
+<g fill="#fff6e6" opacity="0.72">
+  <circle cx="218" cy="72" r="1.8"/>
+  <circle cx="244" cy="64" r="1.6"/>
+  <circle cx="266" cy="76" r="1.5"/>
+  <circle cx="196" cy="92" r="1.4"/>
+</g>
+</svg>

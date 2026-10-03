@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="robots" content="noindex, nofollow">
-<title>Snow &mdash; printable cards</title>
+<title>Snow - printable cards</title>
 <style>
   @page { size: letter portrait; margin: 0; }
 
@@ -57,12 +57,13 @@
     margin: 0 0 0.05in;
   }
 
-  .front h1 {
-    font-size: 27pt;
-    line-height: 1;
-    margin: 0.03in 0 0.01in;
-    color: #6f4220;
-    letter-spacing: -0.01em;
+  .front .sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
   }
 
   .front .sub {
@@ -78,17 +79,17 @@
     margin: 0 0 0.16in;
   }
 
-  .front .jar {
-    width: 0.66in;
+  .front .journey {
+    width: 2.35in;
     height: auto;
     display: block;
-    margin: 0.01in 0 0.03in;
+    margin: 0.04in 0 0.05in;
   }
 
   .front .pitch {
-    font-size: 8.5pt;
-    line-height: 1.34;
-    margin: 0 0 0.07in;
+    font-size: 8.3pt;
+    line-height: 1.32;
+    margin: 0 0 0.06in;
     color: #32241a;
   }
 
@@ -124,7 +125,13 @@
     font-size: 6.8pt;
     line-height: 1.28;
     color: #5f4f3f;
+    display: flex;
+    align-items: center;
+    gap: 0.07in;
+    text-align: left;
   }
+
+  .front .give img { width: 0.26in; height: auto; flex-shrink: 0; }
 
   .front .give b { color: #6f4220; }
 
@@ -174,9 +181,9 @@
   .back ol { margin: 0; padding-left: 0.22in; }
 
   .back li {
-    font-size: 7.8pt;
-    line-height: 1.28;
-    margin-bottom: 0.035in;
+    font-size: 7.7pt;
+    line-height: 1.26;
+    margin-bottom: 0.03in;
   }
 
   .back li b { color: #6f4220; }
@@ -275,7 +282,7 @@
   Page&nbsp;1 is the front, page&nbsp;2 is the back.</p>
   <ul>
     <li>Print <b>double-sided</b>, flip on the <b>long edge</b>.</li>
-    <li>Scale: <b>100%</b> &mdash; not "fit to page", or the QR code shrinks.</li>
+    <li>Scale: <b>100%</b> - not "fit to page", or the QR code shrinks.</li>
     <li>Turn <b>on</b> "Background graphics" in the print dialog.</li>
     <li>Margins: <b>None</b>.</li>
     <li>All four cards on a sheet are identical, so the back lines up whichever way your
@@ -291,68 +298,72 @@
   <div class="card front">
     <p class="event">Global Skilling Team Week 2026</p>
     <p class="kicker">Live sourdough starter</p>
-    <h1>Snow</h1>
+    <h2 class="sr">Snow</h2>
     <p class="sub">dried flakes &middot; just add flour and water</p>
-    <img class="jar" src="../assets/img/snow-jar.svg" alt="">
+    <img class="journey" src="../assets/img/jar-to-loaf.svg"
+         alt="A jar of starter labelled Snow, an arrow, and a baked loaf.">
     <p class="pitch">These papery flakes are a sleeping sourdough culture. In about a week
     of two-minute daily jobs, they become a starter that will raise a loaf of bread.</p>
     <div class="qrbox"><img src="../assets/qr.png" alt="QR code linking to the instructions website."></div>
     <p class="scan">Full instructions, troubleshooting and recipes:</p>
     <p class="url">finandstar.github.io/sourdough</p>
-    <p class="give">It&rsquo;s <b>Give Month</b>, and these are free. If the bread works out,
-    consider <b>$5 to a charity that feeds people</b> &mdash; yours, or see
-    <b>aka.ms/give</b>. Entirely optional.</p>
+    <p class="give"><img src="../assets/img/give-icon.svg" alt=""><span>It&rsquo;s
+    <b>Give Month</b>, and these are free. If the bread works out, consider
+    <b>$5 to a charity that feeds people</b> - yours, or see <b>aka.ms/give</b>.</span></p>
     <p class="foot"><img src="../assets/img/loaf-mark.svg" alt=""><span>Turn over for the quick start &rarr;</span></p>
   </div>
 
   <div class="card front">
     <p class="event">Global Skilling Team Week 2026</p>
     <p class="kicker">Live sourdough starter</p>
-    <h1>Snow</h1>
+    <h2 class="sr">Snow</h2>
     <p class="sub">dried flakes &middot; just add flour and water</p>
-    <img class="jar" src="../assets/img/snow-jar.svg" alt="">
+    <img class="journey" src="../assets/img/jar-to-loaf.svg"
+         alt="A jar of starter labelled Snow, an arrow, and a baked loaf.">
     <p class="pitch">These papery flakes are a sleeping sourdough culture. In about a week
     of two-minute daily jobs, they become a starter that will raise a loaf of bread.</p>
     <div class="qrbox"><img src="../assets/qr.png" alt="QR code linking to the instructions website."></div>
     <p class="scan">Full instructions, troubleshooting and recipes:</p>
     <p class="url">finandstar.github.io/sourdough</p>
-    <p class="give">It&rsquo;s <b>Give Month</b>, and these are free. If the bread works out,
-    consider <b>$5 to a charity that feeds people</b> &mdash; yours, or see
-    <b>aka.ms/give</b>. Entirely optional.</p>
+    <p class="give"><img src="../assets/img/give-icon.svg" alt=""><span>It&rsquo;s
+    <b>Give Month</b>, and these are free. If the bread works out, consider
+    <b>$5 to a charity that feeds people</b> - yours, or see <b>aka.ms/give</b>.</span></p>
     <p class="foot"><img src="../assets/img/loaf-mark.svg" alt=""><span>Turn over for the quick start &rarr;</span></p>
   </div>
 
   <div class="card front">
     <p class="event">Global Skilling Team Week 2026</p>
     <p class="kicker">Live sourdough starter</p>
-    <h1>Snow</h1>
+    <h2 class="sr">Snow</h2>
     <p class="sub">dried flakes &middot; just add flour and water</p>
-    <img class="jar" src="../assets/img/snow-jar.svg" alt="">
+    <img class="journey" src="../assets/img/jar-to-loaf.svg"
+         alt="A jar of starter labelled Snow, an arrow, and a baked loaf.">
     <p class="pitch">These papery flakes are a sleeping sourdough culture. In about a week
     of two-minute daily jobs, they become a starter that will raise a loaf of bread.</p>
     <div class="qrbox"><img src="../assets/qr.png" alt="QR code linking to the instructions website."></div>
     <p class="scan">Full instructions, troubleshooting and recipes:</p>
     <p class="url">finandstar.github.io/sourdough</p>
-    <p class="give">It&rsquo;s <b>Give Month</b>, and these are free. If the bread works out,
-    consider <b>$5 to a charity that feeds people</b> &mdash; yours, or see
-    <b>aka.ms/give</b>. Entirely optional.</p>
+    <p class="give"><img src="../assets/img/give-icon.svg" alt=""><span>It&rsquo;s
+    <b>Give Month</b>, and these are free. If the bread works out, consider
+    <b>$5 to a charity that feeds people</b> - yours, or see <b>aka.ms/give</b>.</span></p>
     <p class="foot"><img src="../assets/img/loaf-mark.svg" alt=""><span>Turn over for the quick start &rarr;</span></p>
   </div>
 
   <div class="card front">
     <p class="event">Global Skilling Team Week 2026</p>
     <p class="kicker">Live sourdough starter</p>
-    <h1>Snow</h1>
+    <h2 class="sr">Snow</h2>
     <p class="sub">dried flakes &middot; just add flour and water</p>
-    <img class="jar" src="../assets/img/snow-jar.svg" alt="">
+    <img class="journey" src="../assets/img/jar-to-loaf.svg"
+         alt="A jar of starter labelled Snow, an arrow, and a baked loaf.">
     <p class="pitch">These papery flakes are a sleeping sourdough culture. In about a week
     of two-minute daily jobs, they become a starter that will raise a loaf of bread.</p>
     <div class="qrbox"><img src="../assets/qr.png" alt="QR code linking to the instructions website."></div>
     <p class="scan">Full instructions, troubleshooting and recipes:</p>
     <p class="url">finandstar.github.io/sourdough</p>
-    <p class="give">It&rsquo;s <b>Give Month</b>, and these are free. If the bread works out,
-    consider <b>$5 to a charity that feeds people</b> &mdash; yours, or see
-    <b>aka.ms/give</b>. Entirely optional.</p>
+    <p class="give"><img src="../assets/img/give-icon.svg" alt=""><span>It&rsquo;s
+    <b>Give Month</b>, and these are free. If the bread works out, consider
+    <b>$5 to a charity that feeds people</b> - yours, or see <b>aka.ms/give</b>.</span></p>
     <p class="foot"><img src="../assets/img/loaf-mark.svg" alt=""><span>Turn over for the quick start &rarr;</span></p>
   </div>
 
@@ -363,97 +374,97 @@
 
   <div class="card back">
     <p class="btitle">Waking Snow up</p>
-    <p class="bsub">Your packet holds <b>5&nbsp;g</b> of dried flakes &mdash; that is the whole batch.</p>
+    <p class="bsub">Your packet holds <b>5&nbsp;g</b> of dried flakes - that is the whole batch.</p>
     <div class="kit">
-      <p><b>You need:</b> a digital scale reading <b>grams</b>, and a clean glass jar of <b>200&ndash;500&nbsp;ml</b> with the screw lid rested on loosely, or a cloth and rubber band.</p>
+      <p><b>You need:</b> a digital scale reading <b>grams</b>, and a clean glass jar of <b>200-500&nbsp;ml</b> with the screw lid rested on loosely, or a cloth and rubber band.</p>
       <p><b>Flour:</b> unbleached <b>bread flour</b> is best; plain / all-purpose is fine. Not bleached, not self-raising.</p>
-      <p><b>Warm = 21&ndash;28&nbsp;&deg;C (70&ndash;82&nbsp;&deg;F).</b> Cooler still works &mdash; the cooler it is, the longer everything takes.</p>
+      <p><b>Warm = 21-28&nbsp;&deg;C (70-82&nbsp;&deg;F).</b> Cooler still works - the cooler it is, the longer everything takes.</p>
     </div>
     <ol>
-      <li><b>Day 1.</b> Tip <b>all 5&nbsp;g</b> of flakes into the jar with <b>25&nbsp;g warm water</b>. Wait 2&ndash;4&nbsp;h until they dissolve, stir in <b>25&nbsp;g flour</b>. Cover loosely, keep warm.</li>
-      <li><b>Day 2.</b> Usually nothing to see yet &mdash; normal. <b>No discarding</b>, there is too little culture to spare: just add <b>25&nbsp;g water + 25&nbsp;g flour</b>.</li>
-      <li><b>Day 3.</b> Bubbles, odd smell. <b>Start discarding:</b> keep <b>25&nbsp;g</b>, bin the rest, feed <b>25&nbsp;g + 25&nbsp;g</b>.</li>
-      <li><b>Days 4&ndash;7.</b> Same again, <b>every 12 hours</b>.</li>
+      <li><b>Day 1.</b> Tip <b>all 5&nbsp;g</b> of flakes into the jar with <b>25&nbsp;g warm water</b>. Wait 2-4&nbsp;h until they dissolve, stir in <b>25&nbsp;g flour</b>. Cover loosely, keep warm.</li>
+      <li><b>Day 2.</b> Usually nothing to see yet - normal. <b>No discarding</b>, there is too little culture to spare: just add <b>25&nbsp;g water + 25&nbsp;g flour</b>.</li>
+      <li><b>Day 3.</b> Bubbles, odd smell. <b>Start discarding:</b> keep <b>25&nbsp;g</b>, bin the rest, feed <b>25&nbsp;g + 25&nbsp;g</b>. <b>Day three always looks and smells alarming. Keep going.</b></li>
+      <li><b>Days 4-7.</b> Same again, <b>every 12 hours</b>.</li>
     </ol>
-    <div class="ready"><b>Ready when</b> it reliably doubles within 4&ndash;8&nbsp;h, domes on top and smells tangy, not of solvent. Usually 5&ndash;7 days.</div>
+    <div class="ready"><b>Ready when</b> it reliably doubles within 4-8&nbsp;h, domes on top and smells tangy, not of solvent. Usually 5-7 days.</div>
     <p class="bake"><b>Now you can bake with it.</b> Follow the instructions on the website, or your favourite baking book.</p>
     <p class="keep">Between bakes it lives in the fridge and needs feeding about <b>once a week</b>. The website walks you through that, plus recipes for the loaf and for the starter you discard along the way.</p>
     <p class="dontpanic"><b>Don&rsquo;t panic:</b> dark liquid on top means it&rsquo;s hungry; a sharp cheesy smell is normal early on. Only bin it for fuzzy mould or pink streaks.</p>
     <div class="tail">
       <img src="../assets/qr.png" alt="QR code linking to the instructions website.">
-      <span><b>finandstar.github.io/sourdough</b>Troubleshooting, feeding, loaf and discard recipes. Day three always looks alarming &mdash; keep going.</span>
+      <span><b>finandstar.github.io/sourdough</b>Troubleshooting, feeding, loaf and discard recipes, and a checklist that remembers where you are.</span>
     </div>
   </div>
 
   <div class="card back">
     <p class="btitle">Waking Snow up</p>
-    <p class="bsub">Your packet holds <b>5&nbsp;g</b> of dried flakes &mdash; that is the whole batch.</p>
+    <p class="bsub">Your packet holds <b>5&nbsp;g</b> of dried flakes - that is the whole batch.</p>
     <div class="kit">
-      <p><b>You need:</b> a digital scale reading <b>grams</b>, and a clean glass jar of <b>200&ndash;500&nbsp;ml</b> with the screw lid rested on loosely, or a cloth and rubber band.</p>
+      <p><b>You need:</b> a digital scale reading <b>grams</b>, and a clean glass jar of <b>200-500&nbsp;ml</b> with the screw lid rested on loosely, or a cloth and rubber band.</p>
       <p><b>Flour:</b> unbleached <b>bread flour</b> is best; plain / all-purpose is fine. Not bleached, not self-raising.</p>
-      <p><b>Warm = 21&ndash;28&nbsp;&deg;C (70&ndash;82&nbsp;&deg;F).</b> Cooler still works &mdash; the cooler it is, the longer everything takes.</p>
+      <p><b>Warm = 21-28&nbsp;&deg;C (70-82&nbsp;&deg;F).</b> Cooler still works - the cooler it is, the longer everything takes.</p>
     </div>
     <ol>
-      <li><b>Day 1.</b> Tip <b>all 5&nbsp;g</b> of flakes into the jar with <b>25&nbsp;g warm water</b>. Wait 2&ndash;4&nbsp;h until they dissolve, stir in <b>25&nbsp;g flour</b>. Cover loosely, keep warm.</li>
-      <li><b>Day 2.</b> Usually nothing to see yet &mdash; normal. <b>No discarding</b>, there is too little culture to spare: just add <b>25&nbsp;g water + 25&nbsp;g flour</b>.</li>
-      <li><b>Day 3.</b> Bubbles, odd smell. <b>Start discarding:</b> keep <b>25&nbsp;g</b>, bin the rest, feed <b>25&nbsp;g + 25&nbsp;g</b>.</li>
-      <li><b>Days 4&ndash;7.</b> Same again, <b>every 12 hours</b>.</li>
+      <li><b>Day 1.</b> Tip <b>all 5&nbsp;g</b> of flakes into the jar with <b>25&nbsp;g warm water</b>. Wait 2-4&nbsp;h until they dissolve, stir in <b>25&nbsp;g flour</b>. Cover loosely, keep warm.</li>
+      <li><b>Day 2.</b> Usually nothing to see yet - normal. <b>No discarding</b>, there is too little culture to spare: just add <b>25&nbsp;g water + 25&nbsp;g flour</b>.</li>
+      <li><b>Day 3.</b> Bubbles, odd smell. <b>Start discarding:</b> keep <b>25&nbsp;g</b>, bin the rest, feed <b>25&nbsp;g + 25&nbsp;g</b>. <b>Day three always looks and smells alarming. Keep going.</b></li>
+      <li><b>Days 4-7.</b> Same again, <b>every 12 hours</b>.</li>
     </ol>
-    <div class="ready"><b>Ready when</b> it reliably doubles within 4&ndash;8&nbsp;h, domes on top and smells tangy, not of solvent. Usually 5&ndash;7 days.</div>
+    <div class="ready"><b>Ready when</b> it reliably doubles within 4-8&nbsp;h, domes on top and smells tangy, not of solvent. Usually 5-7 days.</div>
     <p class="bake"><b>Now you can bake with it.</b> Follow the instructions on the website, or your favourite baking book.</p>
     <p class="keep">Between bakes it lives in the fridge and needs feeding about <b>once a week</b>. The website walks you through that, plus recipes for the loaf and for the starter you discard along the way.</p>
     <p class="dontpanic"><b>Don&rsquo;t panic:</b> dark liquid on top means it&rsquo;s hungry; a sharp cheesy smell is normal early on. Only bin it for fuzzy mould or pink streaks.</p>
     <div class="tail">
       <img src="../assets/qr.png" alt="QR code linking to the instructions website.">
-      <span><b>finandstar.github.io/sourdough</b>Troubleshooting, feeding, loaf and discard recipes. Day three always looks alarming &mdash; keep going.</span>
+      <span><b>finandstar.github.io/sourdough</b>Troubleshooting, feeding, loaf and discard recipes, and a checklist that remembers where you are.</span>
     </div>
   </div>
 
   <div class="card back">
     <p class="btitle">Waking Snow up</p>
-    <p class="bsub">Your packet holds <b>5&nbsp;g</b> of dried flakes &mdash; that is the whole batch.</p>
+    <p class="bsub">Your packet holds <b>5&nbsp;g</b> of dried flakes - that is the whole batch.</p>
     <div class="kit">
-      <p><b>You need:</b> a digital scale reading <b>grams</b>, and a clean glass jar of <b>200&ndash;500&nbsp;ml</b> with the screw lid rested on loosely, or a cloth and rubber band.</p>
+      <p><b>You need:</b> a digital scale reading <b>grams</b>, and a clean glass jar of <b>200-500&nbsp;ml</b> with the screw lid rested on loosely, or a cloth and rubber band.</p>
       <p><b>Flour:</b> unbleached <b>bread flour</b> is best; plain / all-purpose is fine. Not bleached, not self-raising.</p>
-      <p><b>Warm = 21&ndash;28&nbsp;&deg;C (70&ndash;82&nbsp;&deg;F).</b> Cooler still works &mdash; the cooler it is, the longer everything takes.</p>
+      <p><b>Warm = 21-28&nbsp;&deg;C (70-82&nbsp;&deg;F).</b> Cooler still works - the cooler it is, the longer everything takes.</p>
     </div>
     <ol>
-      <li><b>Day 1.</b> Tip <b>all 5&nbsp;g</b> of flakes into the jar with <b>25&nbsp;g warm water</b>. Wait 2&ndash;4&nbsp;h until they dissolve, stir in <b>25&nbsp;g flour</b>. Cover loosely, keep warm.</li>
-      <li><b>Day 2.</b> Usually nothing to see yet &mdash; normal. <b>No discarding</b>, there is too little culture to spare: just add <b>25&nbsp;g water + 25&nbsp;g flour</b>.</li>
-      <li><b>Day 3.</b> Bubbles, odd smell. <b>Start discarding:</b> keep <b>25&nbsp;g</b>, bin the rest, feed <b>25&nbsp;g + 25&nbsp;g</b>.</li>
-      <li><b>Days 4&ndash;7.</b> Same again, <b>every 12 hours</b>.</li>
+      <li><b>Day 1.</b> Tip <b>all 5&nbsp;g</b> of flakes into the jar with <b>25&nbsp;g warm water</b>. Wait 2-4&nbsp;h until they dissolve, stir in <b>25&nbsp;g flour</b>. Cover loosely, keep warm.</li>
+      <li><b>Day 2.</b> Usually nothing to see yet - normal. <b>No discarding</b>, there is too little culture to spare: just add <b>25&nbsp;g water + 25&nbsp;g flour</b>.</li>
+      <li><b>Day 3.</b> Bubbles, odd smell. <b>Start discarding:</b> keep <b>25&nbsp;g</b>, bin the rest, feed <b>25&nbsp;g + 25&nbsp;g</b>. <b>Day three always looks and smells alarming. Keep going.</b></li>
+      <li><b>Days 4-7.</b> Same again, <b>every 12 hours</b>.</li>
     </ol>
-    <div class="ready"><b>Ready when</b> it reliably doubles within 4&ndash;8&nbsp;h, domes on top and smells tangy, not of solvent. Usually 5&ndash;7 days.</div>
+    <div class="ready"><b>Ready when</b> it reliably doubles within 4-8&nbsp;h, domes on top and smells tangy, not of solvent. Usually 5-7 days.</div>
     <p class="bake"><b>Now you can bake with it.</b> Follow the instructions on the website, or your favourite baking book.</p>
     <p class="keep">Between bakes it lives in the fridge and needs feeding about <b>once a week</b>. The website walks you through that, plus recipes for the loaf and for the starter you discard along the way.</p>
     <p class="dontpanic"><b>Don&rsquo;t panic:</b> dark liquid on top means it&rsquo;s hungry; a sharp cheesy smell is normal early on. Only bin it for fuzzy mould or pink streaks.</p>
     <div class="tail">
       <img src="../assets/qr.png" alt="QR code linking to the instructions website.">
-      <span><b>finandstar.github.io/sourdough</b>Troubleshooting, feeding, loaf and discard recipes. Day three always looks alarming &mdash; keep going.</span>
+      <span><b>finandstar.github.io/sourdough</b>Troubleshooting, feeding, loaf and discard recipes, and a checklist that remembers where you are.</span>
     </div>
   </div>
 
   <div class="card back">
     <p class="btitle">Waking Snow up</p>
-    <p class="bsub">Your packet holds <b>5&nbsp;g</b> of dried flakes &mdash; that is the whole batch.</p>
+    <p class="bsub">Your packet holds <b>5&nbsp;g</b> of dried flakes - that is the whole batch.</p>
     <div class="kit">
-      <p><b>You need:</b> a digital scale reading <b>grams</b>, and a clean glass jar of <b>200&ndash;500&nbsp;ml</b> with the screw lid rested on loosely, or a cloth and rubber band.</p>
+      <p><b>You need:</b> a digital scale reading <b>grams</b>, and a clean glass jar of <b>200-500&nbsp;ml</b> with the screw lid rested on loosely, or a cloth and rubber band.</p>
       <p><b>Flour:</b> unbleached <b>bread flour</b> is best; plain / all-purpose is fine. Not bleached, not self-raising.</p>
-      <p><b>Warm = 21&ndash;28&nbsp;&deg;C (70&ndash;82&nbsp;&deg;F).</b> Cooler still works &mdash; the cooler it is, the longer everything takes.</p>
+      <p><b>Warm = 21-28&nbsp;&deg;C (70-82&nbsp;&deg;F).</b> Cooler still works - the cooler it is, the longer everything takes.</p>
     </div>
     <ol>
-      <li><b>Day 1.</b> Tip <b>all 5&nbsp;g</b> of flakes into the jar with <b>25&nbsp;g warm water</b>. Wait 2&ndash;4&nbsp;h until they dissolve, stir in <b>25&nbsp;g flour</b>. Cover loosely, keep warm.</li>
-      <li><b>Day 2.</b> Usually nothing to see yet &mdash; normal. <b>No discarding</b>, there is too little culture to spare: just add <b>25&nbsp;g water + 25&nbsp;g flour</b>.</li>
-      <li><b>Day 3.</b> Bubbles, odd smell. <b>Start discarding:</b> keep <b>25&nbsp;g</b>, bin the rest, feed <b>25&nbsp;g + 25&nbsp;g</b>.</li>
-      <li><b>Days 4&ndash;7.</b> Same again, <b>every 12 hours</b>.</li>
+      <li><b>Day 1.</b> Tip <b>all 5&nbsp;g</b> of flakes into the jar with <b>25&nbsp;g warm water</b>. Wait 2-4&nbsp;h until they dissolve, stir in <b>25&nbsp;g flour</b>. Cover loosely, keep warm.</li>
+      <li><b>Day 2.</b> Usually nothing to see yet - normal. <b>No discarding</b>, there is too little culture to spare: just add <b>25&nbsp;g water + 25&nbsp;g flour</b>.</li>
+      <li><b>Day 3.</b> Bubbles, odd smell. <b>Start discarding:</b> keep <b>25&nbsp;g</b>, bin the rest, feed <b>25&nbsp;g + 25&nbsp;g</b>. <b>Day three always looks and smells alarming. Keep going.</b></li>
+      <li><b>Days 4-7.</b> Same again, <b>every 12 hours</b>.</li>
     </ol>
-    <div class="ready"><b>Ready when</b> it reliably doubles within 4&ndash;8&nbsp;h, domes on top and smells tangy, not of solvent. Usually 5&ndash;7 days.</div>
+    <div class="ready"><b>Ready when</b> it reliably doubles within 4-8&nbsp;h, domes on top and smells tangy, not of solvent. Usually 5-7 days.</div>
     <p class="bake"><b>Now you can bake with it.</b> Follow the instructions on the website, or your favourite baking book.</p>
     <p class="keep">Between bakes it lives in the fridge and needs feeding about <b>once a week</b>. The website walks you through that, plus recipes for the loaf and for the starter you discard along the way.</p>
     <p class="dontpanic"><b>Don&rsquo;t panic:</b> dark liquid on top means it&rsquo;s hungry; a sharp cheesy smell is normal early on. Only bin it for fuzzy mould or pink streaks.</p>
     <div class="tail">
       <img src="../assets/qr.png" alt="QR code linking to the instructions website.">
-      <span><b>finandstar.github.io/sourdough</b>Troubleshooting, feeding, loaf and discard recipes. Day three always looks alarming &mdash; keep going.</span>
+      <span><b>finandstar.github.io/sourdough</b>Troubleshooting, feeding, loaf and discard recipes, and a checklist that remembers where you are.</span>
     </div>
   </div>
 

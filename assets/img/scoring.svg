@@ -7,7 +7,7 @@
 <g font-family="ui-sans-serif, system-ui, Segoe UI, Arial, sans-serif">
 
 <!-- ============ BOULES ============ -->
-<text x="24" y="28" font-size="13" font-weight="700" fill="#6f4220" letter-spacing="1">ROUND LOAF &#8212; BOULE</text>
+<text x="24" y="28" font-size="13" font-weight="700" fill="#6f4220" letter-spacing="1">ROUND LOAF - BOULE</text>
 
 <g fill="#eed7ab" stroke="#b5894f" stroke-width="2">
   <circle cx="66" cy="92" r="38"/>
@@ -52,7 +52,7 @@
 </g>
 
 <!-- ============ BATARDS ============ -->
-<text x="24" y="196" font-size="13" font-weight="700" fill="#6f4220" letter-spacing="1">OVAL LOAF &#8212; B&#194;TARD</text>
+<text x="24" y="196" font-size="13" font-weight="700" fill="#6f4220" letter-spacing="1">OVAL LOAF - B&#194;TARD</text>
 
 <g fill="#eed7ab" stroke="#b5894f" stroke-width="2">
   <ellipse cx="90" cy="250" rx="62" ry="33"/>
@@ -91,7 +91,7 @@
   <text x="510" y="304">wheat ear</text>
 </g>
 
-<text x="320" y="334" font-size="11" fill="#7a6755" text-anchor="middle">Cut 5&#8211;10&#160;mm deep, blade at roughly 45&#176;, in one swift motion on cold dough.</text>
+<text x="320" y="334" font-size="11" fill="#7a6755" text-anchor="middle">Cut 5-10&#160;mm deep, blade at roughly 45&#176;, in one swift motion on cold dough.</text>
 
 </g>
 </svg>
