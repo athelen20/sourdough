@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-labelledby="t">
+<title id="t">A starter jar wearing a handwritten name label</title>
+<rect width="320" height="200" fill="#fdf7ee"/>
+
+<!-- jar -->
+<rect x="96" y="54" width="112" height="124" rx="9" fill="#fffdf9" stroke="#9a5f2e" stroke-width="3"/>
+<path d="M99 118 q14 -13 28 -2 t28 -4 t28 3 t26 -6 v63 a6 6 0 0 1 -6 6 h-98 a6 6 0 0 1 -6 -6 z" fill="#f0dfc0"/>
+<g fill="#fdf7ee" opacity="0.85">
+  <circle cx="120" cy="140" r="6"/>
+  <circle cx="146" cy="156" r="4.5"/>
+  <circle cx="172" cy="136" r="5.5"/>
+  <circle cx="190" cy="158" r="4"/>
+  <circle cx="134" cy="166" r="3.6"/>
+</g>
+
+<!-- lid -->
+<rect x="88" y="36" width="128" height="20" rx="6" fill="#9a5f2e"/>
+<rect x="88" y="36" width="128" height="7" rx="3.5" fill="#6f4220" opacity="0.4"/>
+
+<!-- name label, tilted -->
+<g transform="rotate(-4 152 110)">
+  <rect x="106" y="86" width="94" height="46" rx="5" fill="#fffdf9" stroke="#c9743b" stroke-width="2.6"/>
+  <path d="M118 100 h70" stroke="#c9b394" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- a scrawled name -->
+  <path d="M120 118 q5 -14 10 0 t9 -2 q4 10 9 -4 q3 12 8 -3 q4 9 9 -2 q5 11 10 -3 q4 8 9 0"
+        fill="none" stroke="#6f4220" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+
+<!-- pencil -->
+<g transform="rotate(38 248 118)">
+  <rect x="240" y="60" width="16" height="74" rx="2" fill="#e0b071" stroke="#b5763c" stroke-width="2"/>
+  <path d="M240 134 l8 18 l8 -18 z" fill="#f6ebd6" stroke="#b5763c" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M244 148 l4 4 l4 -4 z" fill="#32241a"/>
+  <rect x="240" y="56" width="16" height="8" rx="2" fill="#c9743b"/>
+</g>
+
+<!-- little sparkle marks -->
+<g stroke="#d9c6a6" stroke-width="2.4" stroke-linecap="round">
+  <path d="M58 70 l0 -12"/><path d="M52 64 l12 0"/>
+  <path d="M60 148 l0 -9"/><path d="M55.5 143.5 l9 0"/>
+</g>
+</svg>

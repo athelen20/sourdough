@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 352" role="img" aria-labelledby="t d">
+<title id="t">Scoring patterns for round and oval sourdough loaves</title>
+<desc id="d">Six patterns for a round boule and four for an oval batard, drawn as cut lines on the top of the loaf.</desc>
+
+<rect width="640" height="352" fill="#fdf7ee"/>
+
+<g font-family="ui-sans-serif, system-ui, Segoe UI, Arial, sans-serif">
+
+<!-- ============ BOULES ============ -->
+<text x="24" y="28" font-size="13" font-weight="700" fill="#6f4220" letter-spacing="1">ROUND LOAF &#8212; BOULE</text>
+
+<g fill="#eed7ab" stroke="#b5894f" stroke-width="2">
+  <circle cx="66" cy="92" r="38"/>
+  <circle cx="166" cy="92" r="38"/>
+  <circle cx="266" cy="92" r="38"/>
+  <circle cx="366" cy="92" r="38"/>
+  <circle cx="466" cy="92" r="38"/>
+  <circle cx="566" cy="92" r="38"/>
+</g>
+
+<g fill="none" stroke="#5e3b1b" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+  <!-- single slash -->
+  <path d="M44 106 Q66 88 88 70"/>
+  <!-- cross -->
+  <path d="M146 92 H186 M166 72 V112"/>
+  <!-- square -->
+  <path d="M249 75 H283 V109 H249 Z"/>
+  <!-- crescent -->
+  <path d="M380 68 A26 26 0 1 0 380 116"/>
+</g>
+
+<!-- asterisk -->
+<g fill="none" stroke="#5e3b1b" stroke-width="2.4" stroke-linecap="round">
+  <path d="M446 92 H486 M466 72 V112 M452 78 L480 106 M452 106 L480 78"/>
+</g>
+
+<!-- wheat sheaf -->
+<g fill="none" stroke="#5e3b1b" stroke-width="2.4" stroke-linecap="round">
+  <path d="M566 114 V70"/>
+  <path d="M566 80 l-9 -7 M566 80 l9 -7"/>
+  <path d="M566 90 l-10 -7 M566 90 l10 -7"/>
+  <path d="M566 101 l-10 -7 M566 101 l10 -7"/>
+</g>
+
+<g font-size="11" fill="#7a6755" text-anchor="middle">
+  <text x="66" y="148">single slash</text>
+  <text x="166" y="148">cross</text>
+  <text x="266" y="148">square</text>
+  <text x="366" y="148">crescent</text>
+  <text x="466" y="148">asterisk</text>
+  <text x="566" y="148">wheat sheaf</text>
+</g>
+
+<!-- ============ BATARDS ============ -->
+<text x="24" y="196" font-size="13" font-weight="700" fill="#6f4220" letter-spacing="1">OVAL LOAF &#8212; B&#194;TARD</text>
+
+<g fill="#eed7ab" stroke="#b5894f" stroke-width="2">
+  <ellipse cx="90" cy="250" rx="62" ry="33"/>
+  <ellipse cx="230" cy="250" rx="62" ry="33"/>
+  <ellipse cx="370" cy="250" rx="62" ry="33"/>
+  <ellipse cx="510" cy="250" rx="62" ry="33"/>
+</g>
+
+<g fill="none" stroke="#5e3b1b" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+  <!-- one long slash -->
+  <path d="M52 260 Q90 244 128 236"/>
+  <!-- diagonal bars -->
+  <path d="M196 258 L210 238"/>
+  <path d="M220 262 L234 236"/>
+  <path d="M244 262 L258 238"/>
+  <path d="M266 258 L276 244"/>
+  <!-- chevrons -->
+  <path d="M334 256 L348 240 L362 256"/>
+  <path d="M368 256 L382 240 L396 256"/>
+  <path d="M402 252 L410 244"/>
+</g>
+
+<!-- wheat ear -->
+<g fill="none" stroke="#5e3b1b" stroke-width="2.4" stroke-linecap="round">
+  <path d="M468 250 H550"/>
+  <path d="M484 250 l-8 -10 M484 250 l-8 10"/>
+  <path d="M502 250 l-8 -10 M502 250 l-8 10"/>
+  <path d="M520 250 l-8 -10 M520 250 l-8 10"/>
+  <path d="M538 250 l-8 -10 M538 250 l-8 10"/>
+</g>
+
+<g font-size="11" fill="#7a6755" text-anchor="middle">
+  <text x="90" y="304">one long slash</text>
+  <text x="230" y="304">diagonal bars</text>
+  <text x="370" y="304">chevrons</text>
+  <text x="510" y="304">wheat ear</text>
+</g>
+
+<text x="320" y="334" font-size="11" fill="#7a6755" text-anchor="middle">Cut 5&#8211;10&#160;mm deep, blade at roughly 45&#176;, in one swift motion on cold dough.</text>
+
+</g>
+</svg>

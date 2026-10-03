@@ -14,6 +14,7 @@ handed out to anyone who wants some; this site is what the card in the packet po
 | Page | What it covers |
 | --- | --- |
 | `index.html` | Landing page, the short version |
+| `about.html` | Where Snow came from, and naming your own starter (generator + Copilot prompt) |
 | `revive.html` | Day-by-day revival of dried flakes |
 | `feeding.html` | Long-term maintenance, ratios, storage |
 | `method.html` | Technique: folds, bulk ferment, shaping, proofing, scoring, baking, storage |
@@ -30,6 +31,22 @@ handed out to anyone who wants some; this site is what the card in the packet po
 `assets/img/*.svg` are original line illustrations drawn for this site, in the site's
 palette. No stock images and no third-party assets, so there is nothing to license or
 attribute. They are plain SVG — edit them in a text editor or any vector tool.
+
+Use presentation attributes (`fill`, `stroke`) directly on elements rather than a `<style>`
+block: some renderers ignore embedded CSS. Only numeric character entities (`&#8212;`) are
+valid in SVG, not HTML named ones (`&mdash;`).
+
+`assets/img/scoring.svg` is a deliberate redraw. Scoring patterns themselves are traditional
+and functional, so the information is free to use, but existing published charts of them are
+copyrighted artwork and are not reproduced here.
+
+## Tested vs collected
+
+Recipes carry a badge. **Tested** means baked repeatedly in my own kitchen. **Collected**
+means gathered from a baker whose judgement I trust, rewritten in metric and plain language,
+and still on the to-bake list. Move a recipe to tested by swapping `tag-untested` for
+`tag-tested`, updating the note at the foot of the page, and changing the label on the
+recipes index.
 
 ## Source of the method
 
@@ -58,6 +75,7 @@ JavaScript. Edit a file, commit, and GitHub Pages publishes it.
 ```
 .
 +-- index.html
++-- about.html
 +-- revive.html
 +-- feeding.html
 +-- method.html
@@ -72,6 +90,7 @@ JavaScript. Edit a file, commit, and GitHub Pages publishes it.
 �   +-- qr-give.png
 �   +-- img/
 �       +-- jar.svg, loaf.svg, flakes.svg, minis.svg, discard.svg, give.svg
+�       +-- name.svg, scoring.svg
 +-- recipes/
 �   +-- index.html
 �   +-- new-recipe-prompt.html

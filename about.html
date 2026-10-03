@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>About Snow &mdash; Snow</title>
+<meta name="description" content="Where this sourdough culture came from, what it lives on, and how to name your own.">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .namebox {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1.5rem 1.25rem;
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  .namebox .out {
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: var(--crust-dark);
+    line-height: 1.2;
+    margin: 0.25rem 0 0.1rem;
+    min-height: 2.4rem;
+  }
+  .namebox .why {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin: 0 0 1rem;
+    min-height: 2.6rem;
+  }
+  .btn {
+    background: var(--accent);
+    color: #fff;
+    border: 0;
+    font: inherit;
+    font-weight: 700;
+    padding: 0.6rem 1.3rem;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .btn:hover { background: var(--crust-dark); }
+  .btn.sec { background: transparent; color: var(--accent); border: 1px solid var(--line); }
+  .btn.sec:hover { background: var(--cream); color: var(--crust-dark); }
+  .prompt {
+    width: 100%;
+    min-height: 22rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    padding: 1rem;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--card);
+    color: var(--ink);
+    resize: vertical;
+  }
+  .promptbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-items: center;
+    margin: 0.75rem 0 0;
+  }
+  .said { font-size: 0.85rem; color: var(--good); font-weight: 700; }
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a class="home" href="./">Snow &mdash; a sourdough starter</a>
+    <p class="tag">Dried flakes, passed hand to hand. Here is how to wake them up.</p>
+    <nav class="main">
+      <a href="./">Home</a>
+      <a href="about.html" aria-current="page">About Snow</a>
+      <a href="revive.html">Revive</a>
+      <a href="feeding.html">Feeding</a>
+      <a href="method.html">The method</a>
+      <a href="recipes/">Recipes</a>
+      <a href="troubleshooting.html">Troubleshooting</a>
+      <a href="share.html">Share it on</a>
+      <a href="give.html">Give</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+<h1>About Snow</h1>
+<p class="lede">Where this particular jar of flour and water came from, what it has been
+living on, and why the thing in your packet deserves a name of its own.</p>
+
+<img class="illus" src="assets/img/jar.svg" alt="A jar of bubbling sourdough starter beside a bag of flour and a kitchen scale">
+
+<h2>Who Snow is</h2>
+<p>Snow came to me through a sourdough workshop in town, taught by a Portuguese baker who
+sent everyone home with a jar and a student guide. The feeding ratios, the loaf and the
+general approach on this site are all from that day, written up here in my own words.</p>
+
+<p><strong>My daughter named it.</strong> Not after anything clever &mdash; it is pale, and
+it sits in a jar looking like weather. That is the whole etymology, and I think it is the
+right amount of thought to give it.</p>
+
+<p>It lives on <strong>King Arthur bread flour</strong> at 100&nbsp;% hydration, which is
+simply what I happened to buy and then kept buying. If you want to match how it has been
+living, use that. If you have something else unbleached, it will adapt within a couple of
+feeds and never mention it again.</p>
+
+<div class="panel">
+  <h3>What it actually is</h3>
+  <p>Flour and water hosting a stable community of wild yeast and lactic acid bacteria. The
+  yeast makes the gas that lifts your bread. The bacteria make the acids that give it flavour
+  and keep unwanted microbes out. Your job is to feed them regularly and keep them warm
+  enough to work. That is genuinely all there is to it.</p>
+</div>
+
+<h2>How it has travelled</h2>
+<p>A Portuguese baker, to a workshop in town, to my kitchen, to a tray of flakes drying on
+baking parchment, to a paper packet on a table at Teams Week, to you. Every one of those
+steps cost the giver nothing &mdash; you divide a starter and both of you still have the
+whole thing, which is a rare property for a gift.</p>
+
+<p>The jar you grow from those flakes is genuinely continuous with the one on my counter.
+Feed it in your kitchen, with your flour and your water, and within a few weeks it will
+start behaving slightly differently from mine. Same culture, different accent.</p>
+
+<h2>Give it a name</h2>
+<p>This is not whimsy for its own sake. A named starter gets fed. "The jar" gets forgotten
+at the back of the fridge behind a jar of olives, and a surprising number of cultures die
+of exactly that. Naming it makes it a small responsibility rather than an ingredient, and
+responsibilities get remembered.</p>
+
+<p>It also makes it much easier to tell someone your starter has done something alarming.</p>
+
+<div class="namebox">
+  <p class="small muted" style="margin:0">Stuck? Press the button.</p>
+  <p class="out" id="out">&nbsp;</p>
+  <p class="why" id="why">&nbsp;</p>
+  <button class="btn" id="roll">Name my starter</button>
+</div>
+
+<div class="panel tip">
+  <h3>What makes a good starter name</h3>
+  <ul>
+    <li><strong>Say it out loud first.</strong> You will be saying "I need to feed
+        <em>&lt;name&gt;</em>" in front of other people for years.</li>
+    <li><strong>Treat it as a pet, not a product.</strong> Names that sound like a brand age
+        badly. Names that sound like a slightly difficult housemate age well.</li>
+    <li><strong>Let a child name it</strong> if there is one available. They are better at
+        this than adults and they will not overthink it.</li>
+    <li><strong>Lean into the sourness.</strong> Half the best starter names are mildly
+        insulting, and the starter does not mind.</li>
+    <li><strong>Write it on the jar.</strong> A name that only lives in your head does not do
+        the job that names are for.</li>
+  </ul>
+</div>
+
+<h2>Or get an assistant to do it</h2>
+<p>Paste this into Copilot. Change the first three lines and leave the rest, which is what
+keeps the output from sounding like a brand consultancy.</p>
+
+<textarea class="prompt" id="p" spellcheck="false">
+=== EDIT THESE THREE LINES ===============================================
+ABOUT ME: I bake on weekends, two kids, kitchen is always slightly too cold
+WHERE MY STARTER CAME FROM: dried flakes from a colleague at a work event
+WHAT I WANT: 10 name options, then a short origin story for my favourite
+==========================================================================
+
+I have a sourdough starter and it needs a name.
+
+A sourdough starter is a jar of flour and water full of wild yeast and
+bacteria. You feed it, it rises and falls, it smells odd sometimes, and it
+lives for years or decades if you look after it. People name them because a
+named jar gets fed and an unnamed one gets forgotten.
+
+GIVE ME NAMES
+Offer ten, in a numbered list, each with one short line on why it fits.
+Make them properly varied — do not give me ten variations of one joke:
+  - a couple that sound like a slightly difficult elderly relative
+  - a couple that play on sourness, bubbling, rising or hunger
+  - a couple that are just a plain human first name, dryly chosen
+  - a couple that nod to where it came from or who gave it to me
+  - a couple that are genuinely silly
+
+Rules: no puns on "yeast we can" or "bread winner" — they are exhausted.
+Nothing that sounds like a startup, a sourdough brand or an Etsy shop. No
+name longer than three syllables. It has to survive being said out loud in
+a kitchen in front of other people.
+
+THEN THE STORY
+Once I pick one, write a short origin story for it — about 150 words, told
+as if the starter has been around far longer than it has and has opinions
+about it. Deadpan, not whimsical. Think a short museum label for an object
+that is slightly too pleased with itself. No exclamation marks, no "magical",
+no "little friend". It can be faintly ridiculous as long as it is delivered
+completely straight.
+
+Finish with one line I could write on masking tape and stick to the jar.
+</textarea>
+
+<div class="promptbar">
+  <button class="btn" id="copy">Copy the prompt</button>
+  <button class="btn sec" id="reset">Reset</button>
+  <span class="said" id="said" hidden>Copied</span>
+</div>
+
+<div class="panel">
+  <h3>Then tell me what you called it</h3>
+  <p>I am keeping an informal list of where Snow has ended up and what it is called now.
+  <a href="contact.html">Drop me a line</a> &mdash; a name and a photo of your first loaf is
+  plenty. If you pass the flakes on again, the next person is free to rename it entirely.</p>
+</div>
+
+<h2>Where to go next</h2>
+<div class="cards">
+  <a href="revive.html"><strong>Revive the flakes</strong><span>Day by day, from dry flakes to an active starter.</span></a>
+  <a href="share.html"><strong>Pass it on</strong><span>Dry your own flakes and give the culture to someone else.</span></a>
+</div>
+
+<script>
+(function () {
+  var first = [
+    ['Bartholomew', 'sounds like it has strong opinions about the fridge'],
+    ['Doreen', 'a plain name, chosen entirely straight'],
+    ['Bubbles', 'descriptive, undignified, hard to argue with'],
+    ['Nigel', 'will sulk if you are late with a feed'],
+    ['The Blob', 'honest about what is actually in the jar'],
+    ['Hildegard', 'carries itself like it predates you'],
+    ['Steve', 'no further explanation offered'],
+    ['Gran', 'older than it has any right to be'],
+    ['Tangy Norman', 'two words, both earned'],
+    ['Sourpuss', 'mildly insulting, entirely accurate'],
+    ['Clive', 'the name of someone who will not be rushed'],
+    ['Yeasty Boy', 'you will regret this within a week'],
+    ['Agnes', 'has survived worse than your kitchen'],
+    ['Lazarus', 'optimistic, given the first few days'],
+    ['Captain Fizz', 'promoted well beyond its abilities'],
+    ['Grumble', 'what it does when underfed'],
+    ['Audrey', 'feed me, and so on'],
+    ['Mildred', 'unimpressed by your schedule'],
+    ['Bread Pitt', 'you were warned about puns and chose this anyway'],
+    ['Sir Rises', 'knighted for services to brunch'],
+    ['Marge', 'reliable, slightly tired, always there'],
+    ['Froth', 'one syllable, no nonsense'],
+    ['Gus', 'small name, large appetite'],
+    ['Winifred', 'will outlive the jar it lives in'],
+    ['Pickle', 'wrong ferment, right energy'],
+    ['Dennis', 'menacingly ordinary'],
+    ['Olga', 'thrives in a cold kitchen'],
+    ['Puff', 'sets expectations usefully low'],
+    ['Granville', 'far too grand for a jam jar'],
+    ['Blobby McFlour', 'the internet would have chosen this']
+  ];
+  var o = document.getElementById('out');
+  var w = document.getElementById('why');
+  var last = -1;
+  document.getElementById('roll').addEventListener('click', function () {
+    var i = last;
+    while (i === last) { i = Math.floor(Math.random() * first.length); }
+    last = i;
+    o.textContent = first[i][0];
+    w.textContent = first[i][1];
+  });
+
+  var box = document.getElementById('p');
+  var original = box.value;
+  document.getElementById('copy').addEventListener('click', function () {
+    box.select();
+    navigator.clipboard.writeText(box.value).then(function () {
+      var s = document.getElementById('said');
+      s.hidden = false;
+      setTimeout(function () { s.hidden = true; }, 2000);
+    });
+  });
+  document.getElementById('reset').addEventListener('click', function () {
+    box.value = original;
+  });
+})();
+</script>
+
+</div>
+
+<footer class="site">
+  <div class="inner">
+    <p>Snow &mdash; shared at Teams Week. <a href="contact.html">Get in touch</a> if it misbehaves.</p>
+  </div>
+</footer>
+</body>
+</html>

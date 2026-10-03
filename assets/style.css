@@ -224,6 +224,20 @@ li { margin: 0.35rem 0; }
 .tag-active { background: #e4efdd; color: #3c5f31; }
 .tag-discard { background: #f6e8da; color: #8a5223; }
 
+.tag-tested, .tag-untested {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-left: 0.3rem;
+}
+
+.tag-tested { background: #dfe9f2; color: #35536e; }
+.tag-untested { background: #f3ece0; color: #7a6755; }
+
 footer.site {
   border-top: 1px solid var(--line);
   margin-top: 3rem;
