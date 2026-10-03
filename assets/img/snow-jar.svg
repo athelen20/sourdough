@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 260" role="img" aria-labelledby="t d">
+<title id="t">A jar of bubbling sourdough starter labelled Snow</title>
+<desc id="d">A glass jar with a screw lid resting on loosely, half full of bubbling starter, with a handwritten label reading Snow.</desc>
+
+<defs>
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+    <stop offset="18%" stop-color="#ffffff" stop-opacity="0.45"/>
+    <stop offset="60%" stop-color="#ffffff" stop-opacity="0.1"/>
+    <stop offset="100%" stop-color="#d9c6a6" stop-opacity="0.3"/>
+  </linearGradient>
+  <linearGradient id="starter" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#f3e3c2"/>
+    <stop offset="100%" stop-color="#e0c795"/>
+  </linearGradient>
+  <linearGradient id="lid" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#b5763c"/>
+    <stop offset="55%" stop-color="#9a5f2e"/>
+    <stop offset="100%" stop-color="#7d4718"/>
+  </linearGradient>
+  <clipPath id="inside">
+    <rect x="42" y="56" width="136" height="180" rx="12"/>
+  </clipPath>
+</defs>
+
+<!-- no background rect: this one sits on white card stock as well as the cream site -->
+
+<!-- escaping gas, because the lid is only resting on -->
+<g fill="none" stroke="#d9c6a6" stroke-width="2.6" stroke-linecap="round" opacity="0.9">
+  <path d="M84 30 q7 -11 0 -21"/>
+  <path d="M110 24 q8 -13 0 -24"/>
+  <path d="M136 30 q7 -11 0 -21"/>
+</g>
+
+<!-- jar body -->
+<rect x="42" y="56" width="136" height="180" rx="12" fill="#fffdf9" stroke="#9a5f2e" stroke-width="3.4"/>
+
+<!-- starter inside, risen to just over half -->
+<g clip-path="url(#inside)">
+  <path d="M42 126 q17 -16 34 -3 t34 -4 t34 3 t34 -7 v121 h-136 z" fill="url(#starter)"/>
+  <!-- bubbles -->
+  <g fill="#fffdf9" opacity="0.9">
+    <circle cx="68" cy="156" r="9"/>
+    <circle cx="100" cy="178" r="6.5"/>
+    <circle cx="131" cy="150" r="7.5"/>
+    <circle cx="152" cy="186" r="5.5"/>
+    <circle cx="82" cy="200" r="5"/>
+    <circle cx="116" cy="208" r="6"/>
+    <circle cx="146" cy="214" r="4.4"/>
+    <circle cx="60" cy="182" r="4.6"/>
+    <circle cx="108" cy="140" r="4.2"/>
+  </g>
+  <!-- glass highlight -->
+  <rect x="42" y="56" width="136" height="180" fill="url(#glass)"/>
+</g>
+
+<!-- rubber band marking the level at the last feed -->
+<rect x="38" y="142" width="144" height="8" rx="4" fill="#c9743b"/>
+
+<!-- label -->
+<g transform="rotate(-2.5 110 196)">
+  <rect x="58" y="172" width="104" height="48" rx="5" fill="#fffdf9" stroke="#c9743b" stroke-width="2.6"/>
+  <text x="110" y="203"
+        font-family="Segoe Script, Bradley Hand, Comic Sans MS, cursive"
+        font-size="27" font-weight="700" fill="#6f4220" text-anchor="middle">Snow</text>
+</g>
+
+<!-- lid, resting on loosely and slightly askew -->
+<g transform="rotate(-3 110 44)">
+  <rect x="34" y="32" width="152" height="24" rx="7" fill="url(#lid)"/>
+  <rect x="34" y="32" width="152" height="8" rx="4" fill="#f6ebd6" opacity="0.28"/>
+  <g stroke="#6f4220" stroke-width="2" opacity="0.5">
+    <path d="M52 40 v10 M70 40 v10 M88 40 v10 M106 40 v10 M124 40 v10 M142 40 v10 M160 40 v10"/>
+  </g>
+</g>
+</svg>

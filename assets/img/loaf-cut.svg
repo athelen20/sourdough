@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 120" role="img" aria-labelledby="t">
+<title id="t">A cut sourdough loaf showing the open crumb inside</title>
+
+<defs>
+  <linearGradient id="crust2" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#dba063"/>
+    <stop offset="55%" stop-color="#c07c3b"/>
+    <stop offset="100%" stop-color="#9b5c26"/>
+  </linearGradient>
+  <linearGradient id="crumb" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#f7ecd6"/>
+    <stop offset="100%" stop-color="#ead7b4"/>
+  </linearGradient>
+</defs>
+
+<ellipse cx="130" cy="110" rx="96" ry="7" fill="#c9b394" opacity="0.38"/>
+
+<!-- back half, standing -->
+<path d="M150 104 Q142 62 170 44 Q196 30 222 44 Q250 62 242 104 Z"
+      fill="url(#crust2)" stroke="#7d4718" stroke-width="2.4" stroke-linejoin="round"/>
+<path d="M172 40 Q196 26 220 40 Q198 32 172 40 Z" fill="#f0d9b4" stroke="#7d4718" stroke-width="2"/>
+
+<!-- front half, cut face towards us -->
+<path d="M18 104 Q10 58 46 38 Q82 18 118 38 Q154 58 146 104 Z"
+      fill="url(#crust2)" stroke="#7d4718" stroke-width="2.6" stroke-linejoin="round"/>
+
+<!-- the crumb -->
+<path d="M28 100 Q22 62 52 46 Q82 30 112 46 Q142 62 136 100 Z"
+      fill="url(#crumb)" stroke="#c9a06a" stroke-width="2"/>
+
+<!-- open, irregular holes - the point of the picture -->
+<g fill="#dcc49c">
+  <ellipse cx="54" cy="64" rx="9" ry="7" transform="rotate(-18 54 64)"/>
+  <ellipse cx="82" cy="54" rx="7" ry="9" transform="rotate(12 82 54)"/>
+  <ellipse cx="108" cy="66" rx="8" ry="6" transform="rotate(24 108 66)"/>
+  <ellipse cx="44" cy="84" rx="6.5" ry="5" transform="rotate(8 44 84)"/>
+  <ellipse cx="70" cy="80" rx="10" ry="7" transform="rotate(-8 70 80)"/>
+  <ellipse cx="98" cy="88" rx="6" ry="8" transform="rotate(16 98 88)"/>
+  <ellipse cx="122" cy="82" rx="5.5" ry="6.5" transform="rotate(-22 122 82)"/>
+  <ellipse cx="62" cy="96" rx="5" ry="4" transform="rotate(10 62 96)"/>
+  <ellipse cx="88" cy="68" rx="4.5" ry="4" transform="rotate(-5 88 68)"/>
+  <ellipse cx="114" cy="54" rx="4.5" ry="4.5"/>
+  <ellipse cx="36" cy="72" rx="4" ry="5"/>
+</g>
+
+<!-- flour on the standing half -->
+<g fill="#fff6e6" opacity="0.7">
+  <circle cx="186" cy="52" r="2.4"/>
+  <circle cx="208" cy="46" r="2"/>
+  <circle cx="228" cy="60" r="2.2"/>
+  <circle cx="166" cy="70" r="1.8"/>
+  <circle cx="236" cy="82" r="1.9"/>
+</g>
+</svg>

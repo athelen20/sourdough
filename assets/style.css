@@ -4,25 +4,41 @@
   --crust: #9a5f2e;
   --crust-dark: #6f4220;
   --ink: #32241a;
-  --muted: #7a6755;
+  --muted: #6b5848;
   --line: #e7dac7;
-  --accent: #c9743b;
-  --good: #4e7a3f;
-  --warn: #b4452f;
+  /* Text-safe accent: 4.9:1 on cream, 5.1:1 on card - WCAG AA for body text */
+  --accent: #a05b2c;
+  /* Decorative only - rules, bars, dividers. Never used for text. */
+  --accent-bright: #c9743b;
+  --good: #46702f;
+  --warn: #a83c27;
 }
 
 * { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
 
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 body {
   margin: 0;
   background: var(--cream);
   color: var(--ink);
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.65;
   -webkit-text-size-adjust: 100%;
+  /* Microsoft style guide: avoid lines ending in hyphens, and avoid widows/orphans */
+  hyphens: none;
+  orphans: 2;
+  widows: 2;
 }
 
 .wrap {
@@ -63,9 +79,13 @@ nav.main a {
   background: rgba(255, 255, 255, 0.14);
   color: #fff6e9;
   text-decoration: none;
-  padding: 0.35rem 0.8rem;
+  padding: 0.5rem 0.9rem;
   border-radius: 999px;
   font-size: 0.9rem;
+  /* WCAG 2.5.8 target size: at least 24px; this lands around 40px tall */
+  min-height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
 }
 
 nav.main a:hover, nav.main a[aria-current="page"] {
@@ -79,7 +99,16 @@ h3 { font-size: 1.1rem; margin: 1.75rem 0 0.4rem; }
 
 .lede { font-size: 1.1rem; color: var(--muted); }
 
+/* Links carry both colour and an underline, never colour alone */
 a { color: var(--accent); }
+
+.wrap p a,
+.wrap li a,
+.wrap td a,
+.wrap dd a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
 
 .cta {
   display: inline-block;
@@ -104,7 +133,7 @@ a { color: var(--accent); }
 
 .panel.warn { border-left: 5px solid var(--warn); }
 .panel.good { border-left: 5px solid var(--good); }
-.panel.tip  { border-left: 5px solid var(--accent); }
+.panel.tip  { border-left: 5px solid var(--accent-bright); }
 .panel h3 { margin-top: 0.25rem; }
 
 .day {
@@ -119,11 +148,10 @@ a { color: var(--accent); }
   display: inline-block;
   background: var(--crust);
   color: #fff6e9;
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 0.2rem 0.7rem;
+  letter-spacing: 0.02em;
+  padding: 0.25rem 0.75rem;
   border-radius: 999px;
   margin: 1rem 0 0.25rem;
 }
@@ -135,13 +163,31 @@ table {
   font-size: 0.95rem;
 }
 
+/* A wide table scrolls inside its own box rather than pushing the whole
+   page sideways. WCAG 1.4.10 allows this for data tables. */
+.scroller {
+  overflow-x: auto;
+  margin: 1rem 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroller table { margin: 0; min-width: 22rem; }
+
+.scroller + .scrollnote {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0.35rem 0 1rem;
+}
+
 th, td {
   text-align: left;
   padding: 0.5rem 0.6rem;
   border-bottom: 1px solid var(--line);
 }
 
-th { color: var(--muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+/* Sentence case, not all caps: Microsoft style guide says all-uppercase
+   text loses the word shapes that help people scan. */
+th { color: var(--muted); font-size: 0.88rem; font-weight: 700; }
 
 td.num { text-align: right; white-space: nowrap; }
 
@@ -214,29 +260,25 @@ li { margin: 0.35rem 0; }
 .tag-active, .tag-discard {
   display: inline-block;
   border-radius: 999px;
-  padding: 0.2rem 0.7rem;
-  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
 }
 
-.tag-active { background: #e4efdd; color: #3c5f31; }
-.tag-discard { background: #f6e8da; color: #8a5223; }
+.tag-active { background: #e2eddb; color: #2f4d25; }
+.tag-discard { background: #f6e8da; color: #7d4718; }
 
 .tag-tested, .tag-untested {
   display: inline-block;
   border-radius: 999px;
-  padding: 0.2rem 0.7rem;
-  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
   margin-left: 0.3rem;
 }
 
-.tag-tested { background: #dfe9f2; color: #35536e; }
-.tag-untested { background: #f3ece0; color: #7a6755; }
+.tag-tested { background: #dce7f1; color: #2b4760; }
+.tag-untested { background: #efe7da; color: #5f4f3f; }
 
 footer.site {
   border-top: 1px solid var(--line);
@@ -260,9 +302,8 @@ nav.sitemap {
 }
 
 nav.sitemap h2 {
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-size: 0.88rem;
+  font-weight: 700;
   color: var(--crust-dark);
   margin: 0 0 0.5rem;
 }
@@ -270,8 +311,10 @@ nav.sitemap h2 {
 nav.sitemap a {
   display: block;
   color: var(--muted);
-  text-decoration: none;
-  padding: 0.18rem 0;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  padding: 0.35rem 0;
+  min-height: 1.6rem;
 }
 
 nav.sitemap a:hover { color: var(--accent); text-decoration: underline; }
@@ -301,9 +344,26 @@ footer.site .colophon {
   outline-offset: 2px;
 }
 
+.totop {
+  display: inline-block;
+  margin: 2.5rem 0 0;
+  padding: 0.6rem 1.1rem;
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  min-height: 2.5rem;
+}
+
+.totop:hover { background: var(--accent); color: #fff; }
+
 :focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 2px;
+  border-radius: 2px;
 }
 
 .muted { color: var(--muted); }

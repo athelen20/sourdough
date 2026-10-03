@@ -41,25 +41,34 @@
   .front { text-align: center; align-items: center; justify-content: flex-start; }
 
   .front .kicker {
-    font-size: 7.5pt;
-    letter-spacing: 0.22em;
+    font-size: 10pt;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: #a08765;
+    font-weight: 700;
+    color: #8a6f4c;
     margin: 0;
   }
 
+  .front .event {
+    font-size: 6.6pt;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #a08765;
+    margin: 0 0 0.05in;
+  }
+
   .front h1 {
-    font-size: 31pt;
+    font-size: 27pt;
     line-height: 1;
-    margin: 0.04in 0 0.02in;
+    margin: 0.03in 0 0.01in;
     color: #6f4220;
     letter-spacing: -0.01em;
   }
 
   .front .sub {
-    font-size: 9.5pt;
+    font-size: 8.6pt;
     color: #7a6755;
-    margin: 0 0 0.14in;
+    margin: 0 0 0.04in;
     font-style: italic;
   }
 
@@ -69,17 +78,17 @@
     margin: 0 0 0.16in;
   }
 
-  .front .mark {
-    width: 1.35in;
+  .front .jar {
+    width: 0.66in;
     height: auto;
     display: block;
-    margin: 0.02in 0 0.07in;
+    margin: 0.01in 0 0.03in;
   }
 
   .front .pitch {
-    font-size: 9.5pt;
-    line-height: 1.42;
-    margin: 0 0 0.14in;
+    font-size: 8.5pt;
+    line-height: 1.34;
+    margin: 0 0 0.07in;
     color: #32241a;
   }
 
@@ -91,12 +100,12 @@
     line-height: 0;
   }
 
-  .front .qrbox img { width: 1.3in; height: 1.3in; display: block; }
+  .front .qrbox img { width: 1.18in; height: 1.18in; display: block; }
 
   .front .scan {
-    font-size: 8pt;
+    font-size: 7.6pt;
     color: #7a6755;
-    margin: 0.07in 0 0.02in;
+    margin: 0.05in 0 0.015in;
   }
 
   .front .url {
@@ -108,12 +117,12 @@
   }
 
   .front .give {
-    margin: 0.1in 0 0;
-    padding: 0.055in 0.085in;
+    margin: 0.07in 0 0;
+    padding: 0.05in 0.08in;
     background: #f6efe3;
     border-radius: 5pt;
-    font-size: 7pt;
-    line-height: 1.3;
+    font-size: 6.8pt;
+    line-height: 1.28;
     color: #5f4f3f;
   }
 
@@ -123,7 +132,13 @@
     margin-top: auto;
     font-size: 7.5pt;
     color: #a08765;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.08in;
   }
+
+  .front .foot img { width: 0.52in; height: auto; }
 
   /* ---------- BACK ---------- */
 
@@ -274,67 +289,71 @@
 <div class="sheet">
 
   <div class="card front">
+    <p class="event">Global Skilling Team Week 2026</p>
     <p class="kicker">Live sourdough starter</p>
     <h1>Snow</h1>
     <p class="sub">dried flakes &middot; just add flour and water</p>
-    <img class="mark" src="../assets/img/loaf-mark.svg" alt="">
+    <img class="jar" src="../assets/img/snow-jar.svg" alt="">
     <p class="pitch">These papery flakes are a sleeping sourdough culture. In about a week
     of two-minute daily jobs, they become a starter that will raise a loaf of bread.</p>
-    <div class="qrbox"><img src="../assets/qr.png" alt="QR code"></div>
+    <div class="qrbox"><img src="../assets/qr.png" alt="QR code linking to the instructions website."></div>
     <p class="scan">Full instructions, troubleshooting and recipes:</p>
     <p class="url">finandstar.github.io/sourdough</p>
     <p class="give">It&rsquo;s <b>Give Month</b>, and these are free. If the bread works out,
     consider <b>$5 to a charity that feeds people</b> &mdash; yours, or see
     <b>aka.ms/give</b>. Entirely optional.</p>
-    <p class="foot">Turn over for the quick start &rarr;</p>
+    <p class="foot"><img src="../assets/img/loaf-mark.svg" alt=""><span>Turn over for the quick start &rarr;</span></p>
   </div>
 
   <div class="card front">
+    <p class="event">Global Skilling Team Week 2026</p>
     <p class="kicker">Live sourdough starter</p>
     <h1>Snow</h1>
     <p class="sub">dried flakes &middot; just add flour and water</p>
-    <img class="mark" src="../assets/img/loaf-mark.svg" alt="">
+    <img class="jar" src="../assets/img/snow-jar.svg" alt="">
     <p class="pitch">These papery flakes are a sleeping sourdough culture. In about a week
     of two-minute daily jobs, they become a starter that will raise a loaf of bread.</p>
-    <div class="qrbox"><img src="../assets/qr.png" alt="QR code"></div>
+    <div class="qrbox"><img src="../assets/qr.png" alt="QR code linking to the instructions website."></div>
     <p class="scan">Full instructions, troubleshooting and recipes:</p>
     <p class="url">finandstar.github.io/sourdough</p>
     <p class="give">It&rsquo;s <b>Give Month</b>, and these are free. If the bread works out,
     consider <b>$5 to a charity that feeds people</b> &mdash; yours, or see
     <b>aka.ms/give</b>. Entirely optional.</p>
-    <p class="foot">Turn over for the quick start &rarr;</p>
+    <p class="foot"><img src="../assets/img/loaf-mark.svg" alt=""><span>Turn over for the quick start &rarr;</span></p>
   </div>
 
   <div class="card front">
+    <p class="event">Global Skilling Team Week 2026</p>
     <p class="kicker">Live sourdough starter</p>
     <h1>Snow</h1>
     <p class="sub">dried flakes &middot; just add flour and water</p>
-    <img class="mark" src="../assets/img/loaf-mark.svg" alt="">
+    <img class="jar" src="../assets/img/snow-jar.svg" alt="">
     <p class="pitch">These papery flakes are a sleeping sourdough culture. In about a week
     of two-minute daily jobs, they become a starter that will raise a loaf of bread.</p>
-    <div class="qrbox"><img src="../assets/qr.png" alt="QR code"></div>
+    <div class="qrbox"><img src="../assets/qr.png" alt="QR code linking to the instructions website."></div>
     <p class="scan">Full instructions, troubleshooting and recipes:</p>
     <p class="url">finandstar.github.io/sourdough</p>
     <p class="give">It&rsquo;s <b>Give Month</b>, and these are free. If the bread works out,
     consider <b>$5 to a charity that feeds people</b> &mdash; yours, or see
     <b>aka.ms/give</b>. Entirely optional.</p>
-    <p class="foot">Turn over for the quick start &rarr;</p>
+    <p class="foot"><img src="../assets/img/loaf-mark.svg" alt=""><span>Turn over for the quick start &rarr;</span></p>
   </div>
 
   <div class="card front">
+    <p class="event">Global Skilling Team Week 2026</p>
     <p class="kicker">Live sourdough starter</p>
     <h1>Snow</h1>
     <p class="sub">dried flakes &middot; just add flour and water</p>
-    <img class="mark" src="../assets/img/loaf-mark.svg" alt="">
+    <img class="jar" src="../assets/img/snow-jar.svg" alt="">
     <p class="pitch">These papery flakes are a sleeping sourdough culture. In about a week
     of two-minute daily jobs, they become a starter that will raise a loaf of bread.</p>
-    <div class="qrbox"><img src="../assets/qr.png" alt="QR code"></div>
+    <div class="qrbox"><img src="../assets/qr.png" alt="QR code linking to the instructions website."></div>
     <p class="scan">Full instructions, troubleshooting and recipes:</p>
     <p class="url">finandstar.github.io/sourdough</p>
     <p class="give">It&rsquo;s <b>Give Month</b>, and these are free. If the bread works out,
     consider <b>$5 to a charity that feeds people</b> &mdash; yours, or see
     <b>aka.ms/give</b>. Entirely optional.</p>
-    <p class="foot">Turn over for the quick start &rarr;</p>
+    <p class="foot"><img src="../assets/img/loaf-mark.svg" alt=""><span>Turn over for the quick start &rarr;</span></p>
   </div>
 
 </div>
@@ -361,7 +380,7 @@
     <p class="keep">Between bakes it lives in the fridge and needs feeding about <b>once a week</b>. The website walks you through that, plus recipes for the loaf and for the starter you discard along the way.</p>
     <p class="dontpanic"><b>Don&rsquo;t panic:</b> dark liquid on top means it&rsquo;s hungry; a sharp cheesy smell is normal early on. Only bin it for fuzzy mould or pink streaks.</p>
     <div class="tail">
-      <img src="../assets/qr.png" alt="QR code">
+      <img src="../assets/qr.png" alt="QR code linking to the instructions website.">
       <span><b>finandstar.github.io/sourdough</b>Troubleshooting, feeding, loaf and discard recipes. Day three always looks alarming &mdash; keep going.</span>
     </div>
   </div>
@@ -385,7 +404,7 @@
     <p class="keep">Between bakes it lives in the fridge and needs feeding about <b>once a week</b>. The website walks you through that, plus recipes for the loaf and for the starter you discard along the way.</p>
     <p class="dontpanic"><b>Don&rsquo;t panic:</b> dark liquid on top means it&rsquo;s hungry; a sharp cheesy smell is normal early on. Only bin it for fuzzy mould or pink streaks.</p>
     <div class="tail">
-      <img src="../assets/qr.png" alt="QR code">
+      <img src="../assets/qr.png" alt="QR code linking to the instructions website.">
       <span><b>finandstar.github.io/sourdough</b>Troubleshooting, feeding, loaf and discard recipes. Day three always looks alarming &mdash; keep going.</span>
     </div>
   </div>
@@ -409,7 +428,7 @@
     <p class="keep">Between bakes it lives in the fridge and needs feeding about <b>once a week</b>. The website walks you through that, plus recipes for the loaf and for the starter you discard along the way.</p>
     <p class="dontpanic"><b>Don&rsquo;t panic:</b> dark liquid on top means it&rsquo;s hungry; a sharp cheesy smell is normal early on. Only bin it for fuzzy mould or pink streaks.</p>
     <div class="tail">
-      <img src="../assets/qr.png" alt="QR code">
+      <img src="../assets/qr.png" alt="QR code linking to the instructions website.">
       <span><b>finandstar.github.io/sourdough</b>Troubleshooting, feeding, loaf and discard recipes. Day three always looks alarming &mdash; keep going.</span>
     </div>
   </div>
@@ -433,7 +452,7 @@
     <p class="keep">Between bakes it lives in the fridge and needs feeding about <b>once a week</b>. The website walks you through that, plus recipes for the loaf and for the starter you discard along the way.</p>
     <p class="dontpanic"><b>Don&rsquo;t panic:</b> dark liquid on top means it&rsquo;s hungry; a sharp cheesy smell is normal early on. Only bin it for fuzzy mould or pink streaks.</p>
     <div class="tail">
-      <img src="../assets/qr.png" alt="QR code">
+      <img src="../assets/qr.png" alt="QR code linking to the instructions website.">
       <span><b>finandstar.github.io/sourdough</b>Troubleshooting, feeding, loaf and discard recipes. Day three always looks alarming &mdash; keep going.</span>
     </div>
   </div>

@@ -41,18 +41,27 @@
     text-align: center;
   }
 
-  .kicker {
-    font-size: 13pt;
-    letter-spacing: 0.26em;
+  .event {
+    font-size: 12pt;
+    letter-spacing: 0.17em;
     text-transform: uppercase;
     color: #a08765;
+    margin: 0 0 0.1in;
+  }
+
+  .kicker {
+    font-size: 21pt;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #8a6f4c;
     margin: 0;
   }
 
   h1 {
-    font-size: 86pt;
+    font-size: 76pt;
     line-height: 0.95;
-    margin: 0.06in 0 0.04in;
+    margin: 0.04in 0 0.03in;
     color: #6f4220;
     letter-spacing: -0.02em;
   }
@@ -66,20 +75,29 @@
 
   .rule { width: 2.2in; border-top: 3px solid #c9743b; margin: 0 0 0.22in; }
 
-  .mark { width: 2.6in; height: auto; display: block; margin: 0.06in 0 0.18in; }
+  .art {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0.4in;
+    margin: 0.08in 0 0.16in;
+  }
+
+  .art .jar { width: 1.15in; height: auto; }
+  .art .cut { width: 2.1in; height: auto; }
 
   .take {
-    font-size: 23pt;
+    font-size: 22pt;
     font-weight: 800;
     color: #32241a;
-    margin: 0 0 0.1in;
+    margin: 0 0 0.09in;
   }
 
   .pitch {
-    font-size: 13.5pt;
-    line-height: 1.5;
+    font-size: 13pt;
+    line-height: 1.48;
     max-width: 6in;
-    margin: 0 0 0.3in;
+    margin: 0 0 0.24in;
   }
 
   .cols {
@@ -163,10 +181,14 @@
 
 <div class="sign">
 
+  <p class="event">Global Skilling Team Week 2026</p>
   <p class="kicker">Live sourdough starter</p>
   <h1>Snow</h1>
   <p class="sub">dried flakes &middot; just add flour and water</p>
-  <img class="mark" src="../assets/img/loaf-mark.svg" alt="">
+  <div class="art">
+    <img class="jar" src="../assets/img/snow-jar.svg" alt="">
+    <img class="cut" src="../assets/img/loaf-cut.svg" alt="">
+  </div>
 
   <p class="take">Take a packet &mdash; they&rsquo;re free</p>
   <p class="pitch">Those papery flakes are a sleeping sourdough culture. Add flour and water,
@@ -179,7 +201,7 @@
       <h3>How to wake them up</h3>
       <p class="lead">Day-by-day instructions, what to do when it smells strange, and what
       to bake once it works.</p>
-      <img src="../assets/qr.png" alt="QR code to the instructions site">
+      <img src="../assets/qr.png" alt="QR code linking to the instructions website.">
       <p class="url">finandstar.github.io/sourdough</p>
       <p class="tiny">Also printed on the card in your packet.</p>
     </div>
@@ -188,7 +210,7 @@
       <h3>It&rsquo;s Give Month</h3>
       <p class="lead">These are free. If the bread works out, consider <b>$5 to a charity
       that feeds people</b> &mdash; and Microsoft will match it.</p>
-      <img src="../assets/qr-give.png" alt="QR code to aka.ms/give">
+      <img src="../assets/qr-give.png" alt="QR code linking to aka.ms/give.">
       <p class="url">aka.ms/give</p>
       <p class="tiny">Entirely optional. Nobody is counting.</p>
     </div>
