@@ -55,17 +55,21 @@ starter came from, including the student guide handed out on the day. That guide
 else's copyrighted work and is **not** reproduced here: everything on these pages is written
 fresh, and the workshop is credited on `contact.html`.
 
-## Card
+## Printing
 
-`card/card.html` is a printable card: four cards to a US Letter sheet, double-sided,
-with a QR code pointing at the live site. Open it in a browser and print at 100% scale
-with background graphics enabled.
+`card/card.html` is the gift card: four to a US Letter sheet, double-sided. Print at 100%
+scale with background graphics on and margins set to None.
 
-`card/table-sign.html` is a one-page Letter sign for the table the packets sit on. It
-carries both QR codes, clearly labelled: the instructions site and `aka.ms/give`.
+`card/table-sign.html` is a one-page Letter sign for the table the packets sit on, carrying
+both QR codes clearly labelled.
+
+Recipe and instruction pages have a print stylesheet — printing one from the browser drops
+the nav, footer and background colours, keeps steps from splitting across pages, and spells
+out external link targets. Useful for taking a recipe into the kitchen.
 
 A local copy at `card/card-print.html` carries personal contact details and is
-deliberately git-ignored, so those details are never published.
+deliberately git-ignored, so those details are never published. It is generated from
+`card.html`, so regenerate it after editing the card.
 
 ## Structure
 

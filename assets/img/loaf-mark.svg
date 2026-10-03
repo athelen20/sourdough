@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 96" role="img" aria-labelledby="t">
+<title id="t">A scored round sourdough loaf with a raised ear</title>
+
+<defs>
+  <linearGradient id="bake" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#e3a966"/>
+    <stop offset="45%" stop-color="#c9813f"/>
+    <stop offset="100%" stop-color="#a4612b"/>
+  </linearGradient>
+  <linearGradient id="earg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#f6e2bd"/>
+    <stop offset="100%" stop-color="#dcb176"/>
+  </linearGradient>
+  <radialGradient id="sheen" cx="34%" cy="22%" r="62%">
+    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.42"/>
+    <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+
+<!-- shadow under the loaf -->
+<ellipse cx="130" cy="86" rx="92" ry="7" fill="#c9b394" opacity="0.4"/>
+
+<!-- body -->
+<path d="M38 84 Q30 46 62 26 Q94 8 130 8 Q166 8 198 26 Q230 46 222 84 Z"
+      fill="url(#bake)" stroke="#7d4718" stroke-width="2.4" stroke-linejoin="round"/>
+
+<!-- darker lower band, where the pot held the heat -->
+<path d="M38 84 Q32 62 46 50 Q96 76 214 50 Q228 62 222 84 Z" fill="#8d511f" opacity="0.26"/>
+
+<!-- top sheen -->
+<path d="M38 84 Q30 46 62 26 Q94 8 130 8 Q166 8 198 26 Q230 46 222 84 Z" fill="url(#sheen)"/>
+
+<!-- the ear: a lifted flap of crust along the score -->
+<path d="M62 44 Q104 16 158 24 Q180 27 190 38 Q152 20 98 42 Q76 51 62 44 Z"
+      fill="url(#earg)" stroke="#7d4718" stroke-width="2.2" stroke-linejoin="round"/>
+<path d="M70 42 Q108 22 154 28" fill="none" stroke="#b07c3e" stroke-width="1.6" opacity="0.7"/>
+
+<!-- blistering on the crust -->
+<g fill="#8d511f" opacity="0.3">
+  <circle cx="74" cy="64" r="2.6"/>
+  <circle cx="96" cy="72" r="1.9"/>
+  <circle cx="122" cy="66" r="2.3"/>
+  <circle cx="150" cy="73" r="1.8"/>
+  <circle cx="176" cy="64" r="2.5"/>
+  <circle cx="198" cy="70" r="1.7"/>
+  <circle cx="58" cy="74" r="1.8"/>
+  <circle cx="136" cy="58" r="1.6"/>
+</g>
+
+<!-- flour dusting -->
+<g fill="#fff6e6" opacity="0.72">
+  <circle cx="88" cy="32" r="2.4"/>
+  <circle cx="118" cy="22" r="1.9"/>
+  <circle cx="150" cy="18" r="2.2"/>
+  <circle cx="178" cy="32" r="1.8"/>
+  <circle cx="66" cy="52" r="1.7"/>
+  <circle cx="206" cy="50" r="2"/>
+  <circle cx="104" cy="52" r="1.5"/>
+  <circle cx="164" cy="48" r="1.6"/>
+</g>
+</svg>
