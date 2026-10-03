@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 44" role="img" aria-labelledby="t">
+<title id="t">A small scored loaf of bread.</title>
+<defs>
+  <linearGradient id="il-bake" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#e3a966"/>
+    <stop offset="48%" stop-color="#c9813f"/>
+    <stop offset="100%" stop-color="#a4612b"/>
+  </linearGradient>
+  <linearGradient id="il-ear" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#f6e2bd"/>
+    <stop offset="100%" stop-color="#dcb176"/>
+  </linearGradient>
+</defs>
+<ellipse cx="32" cy="40" rx="27" ry="2.6" fill="#c9b394" opacity="0.4"/>
+<path d="M6 39 Q3 18 15 10 Q24 4 32 4 Q40 4 49 10 Q61 18 58 39 Z"
+      fill="url(#il-bake)" stroke="#7d4718" stroke-width="2.4" stroke-linejoin="round"/>
+<path d="M6 39 Q4 28 9 24 Q24 33 55 24 Q60 28 58 39 Z" fill="#8d511f" opacity="0.24"/>
+<path d="M15 15 Q28 5 43 8 Q49 10 52 14 Q40 6 25 15 Q19 18 15 15 Z"
+      fill="url(#il-ear)" stroke="#7d4718" stroke-width="2" stroke-linejoin="round"/>
+<g fill="#fff6e6" opacity="0.7">
+  <circle cx="21" cy="11" r="1.5"/>
+  <circle cx="38" cy="6" r="1.3"/>
+  <circle cx="52" cy="20" r="1.3"/>
+</g>
+</svg>

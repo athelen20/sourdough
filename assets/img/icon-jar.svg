@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 64" role="img" aria-labelledby="t">
+<title id="t">A small jar of sourdough starter.</title>
+<defs>
+  <linearGradient id="ij-starter" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#f3e3c2"/>
+    <stop offset="100%" stop-color="#e0c795"/>
+  </linearGradient>
+  <clipPath id="ij-clip"><rect x="8" y="16" width="32" height="42" rx="4"/></clipPath>
+</defs>
+<g fill="none" stroke="#d9c6a6" stroke-width="2" stroke-linecap="round">
+  <path d="M18 8 q3 -5 0 -9"/>
+  <path d="M30 8 q3 -5 0 -9"/>
+</g>
+<rect x="8" y="16" width="32" height="42" rx="4" fill="#fffdf9" stroke="#9a5f2e" stroke-width="2.6"/>
+<g clip-path="url(#ij-clip)">
+  <path d="M8 32 q8 -6 16 -1 t16 -3 v30 h-32 z" fill="url(#ij-starter)"/>
+  <g fill="#fffdf9" opacity="0.9">
+    <circle cx="17" cy="42" r="3.4"/>
+    <circle cx="30" cy="48" r="2.6"/>
+    <circle cx="24" cy="38" r="2.2"/>
+  </g>
+</g>
+<rect x="6" y="36" width="36" height="3.4" rx="1.7" fill="#c9743b"/>
+<rect x="4" y="9" width="40" height="9" rx="3" fill="#9a5f2e"/>
+<rect x="4" y="9" width="40" height="3" rx="1.5" fill="#f6ebd6" opacity="0.3"/>
+</svg>

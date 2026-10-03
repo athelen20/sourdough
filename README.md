@@ -29,8 +29,7 @@ handed out to anyone who wants some; this site is what the card in the packet po
 ## House style
 
 - **No en dashes or em dashes anywhere.** Plain hyphens only, in content and in printable
-  artwork. The audit script fails the build if one appears, including the HTML entities
-  `&mdash;` and `&ndash;`.
+  artwork. The audit script fails if one appears, including the HTML entity forms of them.
 - Sentence case for headings and labels. No all-caps in running text.
 - Metric, by weight, in grams. Celsius with Fahrenheit in brackets.
 

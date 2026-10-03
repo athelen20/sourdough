@@ -58,12 +58,13 @@
     margin: 0;
   }
 
-  h1 {
-    font-size: 76pt;
-    line-height: 0.95;
-    margin: 0.04in 0 0.03in;
-    color: #6f4220;
-    letter-spacing: -0.02em;
+  .sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
   }
 
   .sub {
@@ -75,29 +76,20 @@
 
   .rule { width: 2.2in; border-top: 3px solid #c9743b; margin: 0 0 0.22in; }
 
-  .art {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 0.4in;
-    margin: 0.08in 0 0.16in;
-  }
-
-  .art .jar { width: 1.15in; height: auto; }
-  .art .cut { width: 2.1in; height: auto; }
+  .journey { width: 4.9in; height: auto; display: block; margin: 0.1in 0 0.16in; }
 
   .take {
-    font-size: 22pt;
+    font-size: 21pt;
     font-weight: 800;
     color: #32241a;
-    margin: 0 0 0.09in;
+    margin: 0 0 0.08in;
   }
 
   .pitch {
-    font-size: 13pt;
-    line-height: 1.48;
+    font-size: 12.5pt;
+    line-height: 1.45;
     max-width: 6in;
-    margin: 0 0 0.24in;
+    margin: 0 0 0.2in;
   }
 
   .cols {
@@ -123,7 +115,15 @@
     font-size: 13pt;
     margin: 0 0 0.04in;
     color: #6f4220;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.12in;
   }
+
+  .col h3 .ij { height: 0.36in; width: auto; }
+  .col h3 .il { height: 0.27in; width: auto; }
+  .col h3 .ig { height: 0.3in; width: auto; }
 
   .col .lead {
     font-size: 10pt;
@@ -183,12 +183,10 @@
 
   <p class="event">Global Skilling Team Week 2026</p>
   <p class="kicker">Live sourdough starter</p>
-  <h1>Snow</h1>
+  <h1 class="sr">Snow</h1>
   <p class="sub">dried flakes &middot; just add flour and water</p>
-  <div class="art">
-    <img class="jar" src="../assets/img/snow-jar.svg" alt="">
-    <img class="cut" src="../assets/img/loaf-cut.svg" alt="">
-  </div>
+  <img class="journey" src="../assets/img/jar-to-loaf.svg"
+       alt="A jar of starter labelled Snow, an arrow, and a baked loaf.">
 
   <p class="take">Take a packet - they&rsquo;re free</p>
   <p class="pitch">Those papery flakes are a sleeping sourdough culture. Add flour and water,
@@ -198,7 +196,7 @@
   <div class="cols">
 
     <div class="col">
-      <h3>How to wake them up</h3>
+      <h3><img class="ij" src="../assets/img/icon-jar.svg" alt=""><span>How to wake them up</span><img class="il" src="../assets/img/icon-loaf.svg" alt=""></h3>
       <p class="lead">Day-by-day instructions, what to do when it smells strange, and what
       to bake once it works.</p>
       <img src="../assets/qr.png" alt="QR code linking to the instructions website.">
@@ -207,7 +205,7 @@
     </div>
 
     <div class="col give">
-      <h3>It&rsquo;s Give Month</h3>
+      <h3><img class="ig" src="../assets/img/give-icon.svg" alt=""><span>It&rsquo;s Give Month</span><img class="ig" src="../assets/img/give-icon.svg" alt=""></h3>
       <p class="lead">These are free. If the bread works out, consider <b>$5 to a charity
       that feeds people</b> - and Microsoft will match it.</p>
       <img src="../assets/qr-give.png" alt="QR code linking to aka.ms/give.">
