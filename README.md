@@ -1,4 +1,4 @@
-# Snow — a sourdough starter
+# Snow ï¿½ a sourdough starter
 
 Instructions for reviving dried sourdough starter flakes, keeping the culture alive,
 and baking with it.
@@ -16,11 +16,19 @@ handed out to anyone who wants some; this site is what the card in the packet po
 | `index.html` | Landing page, the short version |
 | `revive.html` | Day-by-day revival of dried flakes |
 | `feeding.html` | Long-term maintenance, ratios, storage |
+| `method.html` | Technique: folds, bulk ferment, shaping, proofing, scoring, baking, storage |
 | `troubleshooting.html` | Hooch, smells, mould, no activity |
 | `share.html` | Drying your own flakes to pass on |
 | `glossary.html` | Sourdough terminology |
-| `contact.html` | Questions and feedback |
-| `recipes/` | Basic loaf, discard pancakes, discard crackers |
+| `contact.html` | Questions, feedback, and credits |
+| `recipes/` | Basic loaf, add-ins, discard pancakes, discard crackers |
+
+## Source of the method
+
+The feeding ratios, the loaf and the timings follow the beginners' sourdough workshop the
+starter came from, including the student guide handed out on the day. That guide is someone
+else's copyrighted work and is **not** reproduced here: everything on these pages is written
+fresh, and the workshop is credited on `contact.html`.
 
 ## Card
 
@@ -41,18 +49,20 @@ JavaScript. Edit a file, commit, and GitHub Pages publishes it.
 +-- index.html
 +-- revive.html
 +-- feeding.html
++-- method.html
 +-- troubleshooting.html
 +-- share.html
 +-- glossary.html
 +-- contact.html
 +-- assets/
-¦   +-- style.css
-¦   +-- qr.png
+ï¿½   +-- style.css
+ï¿½   +-- qr.png
 +-- recipes/
-¦   +-- index.html
-¦   +-- basic-loaf.html
-¦   +-- discard-pancakes.html
-¦   +-- discard-crackers.html
+ï¿½   +-- index.html
+ï¿½   +-- basic-loaf.html
+ï¿½   +-- inclusions.html
+ï¿½   +-- discard-pancakes.html
+ï¿½   +-- discard-crackers.html
 +-- card/
     +-- card.html
 ```
@@ -63,5 +73,5 @@ Found an error, or have a method that works better? Open an issue or a pull requ
 
 ## Licence
 
-Content is released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) —
+Content is released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) ï¿½
 use it, adapt it, pass it on, just credit where it came from.
