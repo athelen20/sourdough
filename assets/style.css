@@ -179,6 +179,159 @@ table {
   margin: 0.35rem 0 1rem;
 }
 
+/* ---- Revival tracker ---- */
+
+.tracker {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.tracker > h3 { margin-top: 0; }
+
+.tracker ol {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  counter-reset: feed;
+}
+
+.tracker li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.7rem 0.1rem;
+  border-top: 1px solid var(--line);
+  margin: 0;
+}
+
+.tracker li:first-child { border-top: 0; }
+
+.tracker input[type="checkbox"] {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.15rem 0 0;
+  flex-shrink: 0;
+  accent-color: var(--good);
+  cursor: pointer;
+}
+
+.tracker label {
+  cursor: pointer;
+  flex: 1;
+  min-height: 1.5rem;
+}
+
+.tracker label b { color: var(--crust-dark); }
+
+.tracker .hint {
+  display: block;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.tracker li.done label { opacity: 0.55; }
+.tracker li.done label b { text-decoration: line-through; }
+
+.tracker .bar {
+  height: 0.6rem;
+  background: var(--line);
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 0.5rem 0 0.3rem;
+}
+
+.tracker .bar span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--good);
+  border-radius: 999px;
+  transition: width 0.25s ease;
+}
+
+.tracker .count { font-size: 0.9rem; color: var(--muted); margin: 0; }
+
+.tracker .controls {
+  margin: 1rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.btn-small {
+  background: transparent;
+  border: 2px solid var(--line);
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.88rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+  min-height: 2.4rem;
+}
+
+.btn-small:hover { border-color: var(--accent); color: var(--accent); }
+
+.privacy {
+  font-size: 0.86rem;
+  color: var(--muted);
+  margin: 0.8rem 0 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tracker .bar span { transition: none; }
+}
+
+/* ---- Recipe scaling ---- */
+
+.scale {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 1rem 0 0.4rem;
+}
+
+.scale .lbl { font-size: 0.9rem; color: var(--muted); }
+
+.scale .group {
+  display: inline-flex;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.scale button {
+  background: transparent;
+  border: 0;
+  border-left: 2px solid var(--line);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--muted);
+  padding: 0.45rem 1rem;
+  cursor: pointer;
+  min-height: 2.4rem;
+}
+
+.scale button:first-child { border-left: 0; }
+.scale button:hover { background: var(--cream); color: var(--accent); }
+
+.scale button[aria-pressed="true"] {
+  background: var(--accent);
+  color: #fff;
+}
+
+td.scaled { font-variant-numeric: tabular-nums; }
+
+.scalenote { font-size: 0.86rem; color: var(--muted); margin: 0.1rem 0 1rem; }
+
 th, td {
   text-align: left;
   padding: 0.5rem 0.6rem;
@@ -431,6 +584,25 @@ footer.site .colophon {
   }
 
   .illus, .hero { max-width: 60%; }
+
+  /* The tracker prints as a plain paper checklist */
+  .tracker { border: 1pt solid #999; background: none; }
+  .tracker .bar, .tracker .count, .tracker .controls, .tracker .privacy { display: none; }
+  .tracker li { border-top: 0.5pt solid #ccc; break-inside: avoid; }
+  .tracker li.done label { opacity: 1; }
+  .tracker li.done label b { text-decoration: none; }
+  .tracker input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14pt;
+    height: 14pt;
+    border: 1pt solid #555;
+    border-radius: 2pt;
+  }
+
+  /* Print whatever batch size is on screen, and say which it is */
+  .scale .group { display: none; }
+  .scale .lbl::after { content: " (as shown)"; }
 
   a { color: #000; text-decoration: underline; }
 

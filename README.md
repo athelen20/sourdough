@@ -74,6 +74,45 @@ in a browser at that size — rendering the SVG directly loses the gradients.
 Each page starts with a skip link, wraps its content in a `<main id="main">` landmark, and
 has a visible focus ring via `:focus-visible`. Keep those if you hand-edit a page.
 
+## Accessibility
+
+Checked against Microsoft's published guidance (Style Guide, Fluent 2, and what Immersive
+Reader actually ships) with WCAG 2.1 AA as the target, which is the level Microsoft
+recommends for general content.
+
+Worth knowing: **Microsoft does not use a dyslexia-specific typeface.** Immersive Reader
+offers Calibri, Sitka and Comic Sans — no OpenDyslexic. The effort goes into size, spacing
+and contrast instead, which is what this site does too.
+
+What is in place, and must survive future edits:
+
+| Thing | Rule |
+| --- | --- |
+| Body text | 19px, line-height 1.65 (WCAG 1.4.12 needs content to survive 1.5) |
+| Text contrast | 4.5:1 minimum. `--accent` is text-safe; `--accent-bright` is decorative only |
+| Links | Colour **and** underline, never colour alone |
+| Headings | Sentence case. No all-caps in text — it destroys the word shapes people scan by |
+| Targets | Interactive elements at least 24px, mostly 40px+ |
+| Reflow | No horizontal scroll at 320px. Wide tables go in `.scroller` |
+| Motion | `prefers-reduced-motion` honoured |
+| Alt text | Under 150 characters, starts with a capital, ends with a full stop, never starts with "Image" |
+
+Re-run `sourdough-audit.py` after edits. It checks links, meta, nav, landmarks, alt text,
+SVG validity and badge consistency.
+
+## Interactive bits
+
+Both are progressive enhancement — they work, or sensibly do not appear, with JavaScript off.
+
+- **Revival tracker** (`revive.html`): a 12-step checklist stored in `localStorage` under
+  `snow-revival-v1`. Per-browser, per-device, never sent anywhere. The progress bar and
+  buttons stay `hidden` until the script confirms they work, so nothing dead is ever shown.
+  Prints as a plain paper checklist.
+- **Recipe scaling** (`assets/scale.js`): add `data-scale` to an ingredient `<table>` whose
+  amounts sit in `<td class="num">`. One control per page scales every marked table together.
+  Handles ranges (`1–2 tbsp`), formats fractions, leaves "a pinch" alone, and warns about
+  half-eggs. With JavaScript off, the written quantities stand and no control appears.
+
 ## Printing
 
 `card/card.html` is the gift card: four to a US Letter sheet, double-sided. Print at 100%

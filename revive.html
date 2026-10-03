@@ -151,6 +151,40 @@ precise. If you are a few hours late with a feed, the starter will forgive you.<
   this first week.</p>
 </div>
 
+<h2>Keep track of the week</h2>
+<p>Day four or five is where most people lose the thread &mdash; the feeds blur together and
+you genuinely cannot remember whether you did this morning's. Tick them off here as you go.</p>
+
+<section class="tracker" id="tracker" aria-labelledby="tracker-h">
+  <h3 id="tracker-h">Revival checklist</h3>
+
+  <div class="bar" id="bar" hidden role="img" aria-label="Progress through the revival feeds."><span id="bar-fill"></span></div>
+  <p class="count" id="count" hidden>12 feeds to go.</p>
+
+  <ol>
+    <li><input type="checkbox" id="f1"><label for="f1"><b>Day 1, morning.</b> <span class="hint">Tip in all the flakes with 25&nbsp;g warm water. Wait 2&ndash;4&nbsp;h, then stir in 25&nbsp;g flour.</span></label></li>
+    <li><input type="checkbox" id="f2"><label for="f2"><b>Day 2.</b> <span class="hint">25&nbsp;g water, 25&nbsp;g flour. No discarding yet.</span></label></li>
+    <li><input type="checkbox" id="f3"><label for="f3"><b>Day 3.</b> <span class="hint">Keep 25&nbsp;g, bin the rest, feed 25&nbsp;g + 25&nbsp;g. Smells odd. Normal.</span></label></li>
+    <li><input type="checkbox" id="f4"><label for="f4"><b>Day 4, morning.</b> <span class="hint">Keep 25&nbsp;g, feed 25&nbsp;g + 25&nbsp;g.</span></label></li>
+    <li><input type="checkbox" id="f5"><label for="f5"><b>Day 4, evening.</b> <span class="hint">Same again.</span></label></li>
+    <li><input type="checkbox" id="f6"><label for="f6"><b>Day 5, morning.</b> <span class="hint">Same again. Activity may dip today &mdash; ignore it.</span></label></li>
+    <li><input type="checkbox" id="f7"><label for="f7"><b>Day 5, evening.</b> <span class="hint">Same again.</span></label></li>
+    <li><input type="checkbox" id="f8"><label for="f8"><b>Day 6, morning.</b> <span class="hint">Same again. Watch for a predictable rise.</span></label></li>
+    <li><input type="checkbox" id="f9"><label for="f9"><b>Day 6, evening.</b> <span class="hint">Same again.</span></label></li>
+    <li><input type="checkbox" id="f10"><label for="f10"><b>Day 7, morning.</b> <span class="hint">Same again.</span></label></li>
+    <li><input type="checkbox" id="f11"><label for="f11"><b>Day 7, evening.</b> <span class="hint">Same again. Nearly there.</span></label></li>
+    <li><input type="checkbox" id="f12"><label for="f12"><b>It doubles reliably.</b> <span class="hint">Domed, bubbly, smells tangy. Switch to 1:3:3 and go and bake something.</span></label></li>
+  </ol>
+
+  <div class="controls" id="tracker-controls" hidden>
+    <button type="button" class="btn-small" id="reset-tracker">Clear all ticks</button>
+    <button type="button" class="btn-small" id="print-tracker">Print this checklist</button>
+  </div>
+
+  <p class="privacy" id="privacy-note">Tick these off as you go. You can also just print the
+  page and use a pencil.</p>
+</section>
+
 <h2>How to know it is ready</h2>
 <div class="panel good">
   <p>Your starter is ready to bake with when <strong>all</strong> of these are true:</p>
@@ -190,6 +224,97 @@ covers grey liquid, strange smells, mould, and what to do when nothing happens a
 
 
 <p><a class="totop" href="#main">Back to top &uarr;</a></p>
+
+<script>
+(function () {
+  var KEY = 'snow-revival-v1';
+  var tracker = document.getElementById('tracker');
+  if (!tracker) { return; }
+
+  var boxes = [].slice.call(tracker.querySelectorAll('input[type="checkbox"]'));
+  var fill = document.getElementById('bar-fill');
+  var count = document.getElementById('count');
+
+  // No storage (private mode, old browser)? The checklist still ticks,
+  // it just will not be remembered. Say so rather than failing silently.
+  var canStore = (function () {
+    try {
+      localStorage.setItem(KEY + '-t', '1');
+      localStorage.removeItem(KEY + '-t');
+      return true;
+    } catch (e) { return false; }
+  })();
+
+  function paint() {
+    var done = 0;
+    boxes.forEach(function (b) {
+      b.parentNode.classList.toggle('done', b.checked);
+      if (b.checked) { done++; }
+    });
+    var pct = Math.round((done / boxes.length) * 100);
+    fill.style.width = pct + '%';
+    fill.parentNode.setAttribute('aria-label',
+      done + ' of ' + boxes.length + ' feeds done.');
+    if (done === 0) {
+      count.textContent = boxes.length + ' feeds to go.';
+    } else if (done === boxes.length) {
+      count.textContent = 'All done. Go and bake something.';
+    } else {
+      count.textContent = done + ' of ' + boxes.length + ' done, '
+        + (boxes.length - done) + ' to go.';
+    }
+  }
+
+  function save() {
+    if (!canStore) { return; }
+    try {
+      localStorage.setItem(KEY, boxes.map(function (b) {
+        return b.checked ? '1' : '0';
+      }).join(''));
+    } catch (e) { /* storage full or blocked; ticks still work this session */ }
+  }
+
+  function load() {
+    if (!canStore) { return; }
+    try {
+      var saved = localStorage.getItem(KEY);
+      if (!saved) { return; }
+      boxes.forEach(function (b, i) { b.checked = saved.charAt(i) === '1'; });
+    } catch (e) { /* ignore */ }
+  }
+
+  boxes.forEach(function (b) {
+    b.addEventListener('change', function () { paint(); save(); });
+  });
+
+  document.getElementById('reset-tracker').addEventListener('click', function () {
+    boxes.forEach(function (b) { b.checked = false; });
+    paint();
+    save();
+  });
+
+  document.getElementById('print-tracker').addEventListener('click', function () {
+    window.print();
+  });
+
+  // Only reveal the progress bar and buttons once we know they work
+  document.getElementById('bar').hidden = false;
+  document.getElementById('count').hidden = false;
+  document.getElementById('tracker-controls').hidden = false;
+
+  document.getElementById('privacy-note').innerHTML = canStore
+    ? '<strong>This stays in your browser.</strong> Nothing is sent anywhere and I cannot '
+      + 'see it. That also means your phone and your laptop keep separate lists, and '
+      + 'clearing your browsing data clears this too. If you would rather use paper, '
+      + 'print it.'
+    : '<strong>Your browser will not remember these ticks.</strong> Private browsing and '
+      + 'some privacy settings block the storage this uses, so the list resets when you '
+      + 'leave. Printing it is the reliable option.';
+
+  load();
+  paint();
+})();
+</script>
 </main>
 
 <footer class="site">
